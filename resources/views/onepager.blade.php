@@ -7,8 +7,11 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-<h1 class="text-3xl font-bold underline p-5">
-    PHP Monitor says hi!
-</h1>
+<div class="p-5 max-w-4xl flex flex-col m-auto">
+    <h1 class="text-3xl font-bold mb-3">
+        Easily manage your local PHP setup on the Mac.
+    </h1>
+    <p>PHP Monitor (or phpmon) is a lightweight, native Mac menu bar app that interacts with Laravel Valet. It can help you manage multiple PHP installations, locate config files, and so much more.</p>
+</div>
 </body>
 </html>
