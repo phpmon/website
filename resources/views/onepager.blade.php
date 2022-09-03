@@ -19,37 +19,45 @@
         </header>
     </div>
     <div class="fle p flex-row p-4">
-        <div class="flex flex-row m-auto max-w-2xl py-8">
-            <div>
-                <img src="" width="800px" height="300px" class="mb-6 bg-gray-100">
+        <div class="flex flex-col m-auto max-w-3xl py-8">
+            <div class="max-w-2xl m-auto">
                 <p class="text-2xl leading-8 mb-6"><b>PHP Monitor</b> (or phpmon) is a <em>lightweight, native</em> Mac menu bar app that interacts with <a href="https://github.com/laravel/valet">Laravel Valet</a>.</p>
-                <p class="mb-6">This app is made with <span class="text-red-500">♥</span> by <a href="https://nicoverbruggen.be" class="text-blue-800">Nico Verbruggen</a>. It is <b>open source and entirely free to use</b>. The app is supported by generous donations. So, if you benefit from the app and make some money, please consider sponsoring... Thanks!</p>
+                <p class="mb-6 text-lg">This app is made with <span class="text-red-500">♥</span> by <a href="https://nicoverbruggen.be" class="text-blue-800">Nico Verbruggen</a>. It is <b>open source and entirely free to use</b>. The app is supported by generous donations. So, if you benefit from the app and make some money, please consider sponsoring... Thanks!</p>
                 <div class="flex justify-center space-x-3">
                     <a href="https://nicoverbruggen.be/sponsor" class="mt-4 text-lg px-3 py-2 inline-block bg-black hover:bg-blue-900 text-white rounded-lg">Sponsor</a>
                     <a href="https://github.com/nicoverbruggen/phpmon" class="mt-4 text-lg px-3 py-2 inline-block bg-black hover:bg-blue-900 text-white rounded-lg">GitHub</a>
                     <a href="https://github.com/nicoverbruggen/phpmon#-how-to-install" class="mt-4 text-lg px-3 py-2 inline-block bg-green-800 hover:bg-blue-900 text-white rounded-lg">Download</a>
                 </div>
             </div>
+            <div>
+                <img src="/images/phpmon.jpg" alt="PHP Monitor" class="m-auto mt-10 max-w-3xl max-w-full bg-gray-100">
+                <div class="bg-black p-10 font-mono text-white mt-10">
+                    <span class="font-sans block text-xs uppercase mb-2 text-gray-300">Installation via Homebrew</span>
+                    <span>$ brew tap nicoverbruggen/homebrew-cask<br/>
+                        $ brew install --cask phpmon
+                    </span>
+                </div>
+            </div>
         </div>
-        <x-feature>
+        <x-feature title="A GUI for Valet... and more" img-src="/images/valet.png">
             PHP Monitor makes use of <b>Laravel Valet</b>. That means that PHP Monitor builds upon a solid and trusted foundation. If you've already got that installed, you can get up and running very quickly!
         </x-feature>
-        <x-feature class="lg:flex-row-reverse">
-            PHP Monitor <b>lives in your menu bar</b>, and from there you can interact with a variety of functionality. If you like working with your keyboard, no worries: you can set up a custom hotkey to trigger this menu.
+        <x-feature title="Information at a glance." img-src="/images/menu-bar.png" y-position="top" class="lg:flex-row-reverse">
+            PHP Monitor lives in your menu bar. From here, you can use the bulk of PHP Monitor's functionality, including the <b>global version switcher</b> as well as <b>services status</b> section.
         </x-feature>
-        <x-feature>
-            If you're like me, you sometimes need to edit a <b>configuration file or toggle an extension</b>. But where do you have to look for that stuff again? Look no further than PHP Monitor's main menu.
+        <x-feature title="No more hunting for config files." img-src="/images/config.png" y-position="top">
+            Sometimes you need to edit a <b>configuration file</b> or <b>toggle an extension</b>. But where are those pesky config files located again? From the PHP Monitor's menu you can easily find them. Extensions can even be toggled with one click of the button!
         </x-feature>
-        <x-feature class="lg:flex-row-reverse">
-            Lost track of all your domains? No worries, the app includes a <b>domain list</b> that you can use to get a quick overview of all domains and proxies you have set up, as well as their PHP version, what type of project they are, etc.
+        <x-feature title="All of your domains in a single list." img-src="/images/domains.png" y-position="top" class="lg:flex-row-reverse">
+            Do you have many projects or legacy sites? No worries, the app includes a <b>domain list</b> that you can use to get a quick overview of all domains and proxies you have set up, as well as their PHP version, what type of project they are, and more.
         </x-feature>
-        <x-feature>
-            PHP Monitor includes a <b>global version switcher</b>, that you can use to quickly change which version of PHP is linked in your terminal.
+        <x-feature title="Quickly link a new domain or proxy." img-src="/images/link-folder.png" y-position="top">
+            You can easily <b>link or proxy</b> a folder: you can even easily customize the name of the domain and secure this new domain by simply checking a box.
         </x-feature>
-        <x-feature class="lg:flex-row-reverse">
-            In addition to offering a global version switcher, PHP Monitor also includes support for Valet's <b>site isolation</b> feature.
+        <x-feature title="A different PHP version per domain." img-src="/images/isolation.png" y-position="bottom" class="lg:flex-row-reverse">
+            In addition to offering a global version switcher, PHP Monitor also includes support for Valet's <b>site isolation</b> feature. This allows you to use a specific version of PHP with a specific domain, all while retaining the globally linked PHP version.
         </x-feature>
-        <x-feature>
+        <x-feature title="Determine compatibility." img-src="/images/phpinfo.png" y-position="top">
             PHP Monitor will help you figure out if your sites are <b>compatible with the current version of PHP</b> that is linked, and suggest when site isolation may be of use.
         </x-feature>
     </div>
