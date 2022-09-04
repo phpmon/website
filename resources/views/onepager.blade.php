@@ -39,7 +39,7 @@
                 <h1 class="text-5xl font-bold mb-3 text-blue-800">
                     Monitor and manage<br/>your PHP installations<br/> <span class="text-black">with ease</span>.
                 </h1>
-                <p class="text-2xl leading-8 mt-8"><b>PHP Monitor</b> (”phpmon”) is a lightweight, native Mac menu bar app that interacts with <a href="https://github.com/laravel/valet" class="text-blue-800 underline">Valet</a>.</p>
+                <p class="text-2xl leading-8 mt-8"><b>PHP Monitor</b> (“phpmon”) is a lightweight, native Mac menu bar app that interacts with <a href="https://github.com/laravel/valet" class="text-blue-800 underline">Valet</a>.</p>
                 <div class="flex space-x-3 mt-6">
                     <a href="https://nicoverbruggen.be/sponsor" class="mt-4 text-lg px-3 py-2 inline-block bg-blue-900 hover:bg-blue-800 text-white rounded-lg shadow-md">Sponsor</a>
                     <a href="https://github.com/nicoverbruggen/phpmon" class="mt-4 text-lg px-3 py-2 inline-block bg-blue-900 hover:bg-blue-800 text-white rounded-lg shadow-md">GitHub</a>
