@@ -13,6 +13,16 @@
     <meta name="twitter:site" content="@nicoverbruggen">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
+    {{-- Favicons --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url('/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url('/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url('/favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url('/favicons/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ url('/favicons/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <link rel="shortcut icon" href="{{ url('/favicons/favicon.ico') }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{ url('/favicons/browserconfig.xml') }}">
+    <meta name="theme-color" content="#ffffff">
     {{-- Vite --}}
     @vite('resources/css/app.css')
 </head>
@@ -68,12 +78,14 @@
         <x-feature title="A tiny footprint." img-src="/images/sysres.png" y-position="top" class="lg:flex-row-reverse">
             Laravel Valet is a lightweight solution that is much leaner than Docker, and PHP Monitor as a companion tool uses equally few system resources. It is light on RAM and its CPU usage is negligible.
         </x-feature>
-        <x-feature title="Privacy conscious." img-src="/images/privacy.png" y-position="top">
-            No tracking. No bullshit. Nothing to worry about. The only outbound connection PHP Monitor makes is a check (that you can disable!) to see if a newer version is available. If you encounter a bug or crash, please get in touch—I'd be happy to help you out.
-        </x-feature>
-        <x-feature title="No nagging for donations." img-src="/images/sysres.png" y-position="top" class="lg:flex-row-reverse">
-            PHP Monitor will only ask you to donate <em>once</em>, and should never ask you again... unless you install a fresh copy of the app on a new computer, of course. If you can, please do consider sending me some money!
-        </x-feature>
+        <div class="flex lg:flex-row flex-col m-auto max-w-5xl py-8 gap-x-10">
+            <x-single-feature title="Privacy conscious.">
+                No tracking. No bullshit. Nothing to worry about. The only outbound connection PHP Monitor makes is a check (that you can disable!) to see if a newer version is available. If you encounter a bug or crash, please get in touch—I'd be happy to help you out.
+            </x-single-feature>
+            <x-single-feature title="No nagging for donations.">
+                PHP Monitor will only ask you to donate <em>once</em>, and should never ask you again... unless you install a fresh copy of the app on a new computer, of course. If you can, please do consider sending me some money!
+            </x-single-feature>
+        </div>
     </div>
     <footer class="bg-blue-50 flex p-5 mt-6">
         <div class="flex flex-col m-auto max-w-xl space-y-2">
