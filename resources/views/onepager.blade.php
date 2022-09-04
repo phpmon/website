@@ -4,6 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Monitor</title>
+    <meta name="description" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
+    {{-- OG --}}
+    <meta property="og:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
+    <meta property="og:image" content="{{ url('/images/phpmon-social.png') }}">
+    {{-- Twitter --}}
+    <meta name="twitter:image:src" content="{{ url('/images/phpmon-social.png') }}">
+    <meta name="twitter:site" content="@nicoverbruggen">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
+    {{-- Vite --}}
     @vite('resources/css/app.css')
 </head>
 <body>
