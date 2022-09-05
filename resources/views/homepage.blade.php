@@ -43,9 +43,9 @@
                 </h1>
                 <p class="text-2xl leading-8 mt-8"><b>PHP Monitor</b> (“phpmon”) is a lightweight, native Mac menu bar app that interacts with <a href="https://github.com/laravel/valet" class="text-blue-800 underline">Valet</a>.</p>
                 <div class="flex space-x-3 mt-6">
-                    <a href="https://nicoverbruggen.be/sponsor" class="mt-4 text-lg px-3 py-2 inline-block bg-blue-900 hover:bg-blue-800 text-white rounded-lg shadow-md">Sponsor</a>
-                    <a href="https://github.com/nicoverbruggen/phpmon" class="mt-4 text-lg px-3 py-2 inline-block bg-blue-900 hover:bg-blue-800 text-white rounded-lg shadow-md">GitHub</a>
-                    <a href="https://github.com/nicoverbruggen/phpmon/releases" class="mt-4 text-lg px-3 py-2 inline-block bg-green-800 hover:bg-blue-800 text-white rounded-lg shadow-md">Download</a>
+                    <a href="{{ url()->route('sponsor') }}" class="mt-4 text-lg px-3 py-2 inline-block bg-blue-900 hover:bg-blue-800 text-white rounded-lg shadow-md">Sponsor</a>
+                    <a href="{{ url()->route('github') }}" class="mt-4 text-lg px-3 py-2 inline-block bg-blue-900 hover:bg-blue-800 text-white rounded-lg shadow-md">GitHub</a>
+                    <a href="{{ url()->route('releases') }}" class="mt-4 text-lg px-3 py-2 inline-block bg-green-800 hover:bg-blue-800 text-white rounded-lg shadow-md">Download</a>
                 </div>
             </div>
         </header>
