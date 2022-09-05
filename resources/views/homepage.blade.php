@@ -29,6 +29,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="{{ url('/favicons/browserconfig.xml') }}">
     <meta name="theme-color" content="#ffffff">
+    {{-- Fathom --}}
+    <script src="https://net.phpmon.app/script.js" data-site="HVPVBSJR" defer></script>
 </head>
 <body class="font-sans">
 <div>
