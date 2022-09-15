@@ -71,7 +71,7 @@
                 </p>
             </div>
             @if (Cache::has('stargazers') && Cache::has('downloads'))
-                <div class="max-w-2xl m-auto mt-6 pb-6 space-y-3 border border-b-gray-200 rounded-lg px-8 py-4">
+                <div class="max-w-2xl m-auto mt-6 pb-6 space-y-3 border border-b-gray-200 rounded-lg px-8 py-4 shadow-lg">
                     <p class="uppercase font-bold text-center mt-1 mb-5 flex items-center space-x-2">
                         <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
                         <span>GitHub Stats</span>
@@ -91,35 +91,35 @@
                 </div>
             @endif
         </div>
-        <x-feature title="A solid foundation." img-src="/images/valet.png">
+        <x-feature feature-title="A solid foundation." img-src="/images/valet.png">
             PHP Monitor interacts with your local <b>Laravel Valet</b> installation. That means that PHP Monitor builds upon a solid and trusted foundation. If you've already got that installed, it's very easy to get started.
         </x-feature>
-        <x-feature title="Information at a glance." img-src="/images/menu-bar.png" y-position="top" class="lg:flex-row-reverse">
+        <x-feature feature-title="Information at a glance." img-src="/images/menu-bar.png" y-position="top" class="lg:flex-row-reverse">
             PHP Monitor lives in your menu bar. From here, you can use the bulk of PHP Monitor's functionality, including the <b>global version switcher</b> as well as <b>services status</b> section.
         </x-feature>
-        <x-feature title="No more hunting for config files." img-src="/images/config.png" y-position="top">
+        <x-feature feature-title="No more hunting for config files." img-src="/images/config.png" y-position="top">
             Sometimes you need to edit a <b>configuration file</b> or <b>toggle an extension</b>. But where are those pesky config files located again? From PHP Monitor's menu you can easily find them. Extensions can even be toggled with one click of the button!
         </x-feature>
-        <x-feature title="All of your domains in a single list." img-src="/images/domains.png" y-position="top" class="lg:flex-row-reverse">
+        <x-feature feature-title="All of your domains in a single list." img-src="/images/domains.png" y-position="top" class="lg:flex-row-reverse">
             Do you have many projects or legacy sites? No worries, the app includes a <b>domain list</b> that you can use to get a quick overview of all domains and proxies you have set up, as well as their PHP version, what type of project they are, and more.
         </x-feature>
-        <x-feature title="Quickly link a new domain or proxy." img-src="/images/link-folder.png" y-position="top">
+        <x-feature feature-title="Quickly link a new domain or proxy." img-src="/images/link-folder.png" y-position="top">
             You can easily <b>link or proxy</b> a folder: you can even easily customize the name of the domain and secure this new domain by simply checking a box. This will make these projects accessible as *.test domains on your system.
         </x-feature>
-        <x-feature title="A different PHP version per domain." img-src="/images/isolation.png" y-position="bottom" class="lg:flex-row-reverse">
+        <x-feature feature-title="A different PHP version per domain." img-src="/images/isolation.png" y-position="bottom" class="lg:flex-row-reverse">
             In addition to offering a global version switcher (which switches the PHP version for all of your projects), this app also includes support for Valet's <b>site isolation</b> feature. This allows you to use a specific version of PHP with a specific domain, all while retaining the globally linked PHP version.
         </x-feature>
-        <x-feature title="Determine compatibility." img-src="/images/phpinfo.png" y-position="top">
+        <x-feature feature-title="Determine compatibility." img-src="/images/phpinfo.png" y-position="top">
             PHP Monitor will help you figure out if your sites are <b>compatible</b> with the <b>currently linked version of PHP</b>. You will receive suggestions when site isolation may be of use.
         </x-feature>
-        <x-feature title="A tiny footprint." img-src="/images/sysres.png" y-position="top" class="lg:flex-row-reverse">
+        <x-feature feature-title="A tiny footprint." img-src="/images/sysres.png" y-position="top" class="lg:flex-row-reverse">
             Laravel Valet is a lightweight solution that is much leaner than Docker, and PHP Monitor as a companion tool uses equally few system resources. It is light on RAM and its CPU usage is negligible.
         </x-feature>
         <div class="flex lg:flex-row flex-col m-auto max-w-5xl py-4 md:py-8 gap-x-10">
-            <x-single-feature title="Privacy conscious.">
+            <x-single-feature feature-title="Privacy conscious.">
                 No tracking. No bullshit. Nothing to worry about. The only outbound connection PHP Monitor makes is a check (that you can disable!) to see if a newer version is available. If you encounter a bug or crash, please get in touch—I'd be happy to help you out.
             </x-single-feature>
-            <x-single-feature title="No nagging for donations.">
+            <x-single-feature feature-title="No nagging for donations.">
                 PHP Monitor will only ask you to donate <em>once</em>, and should never ask you again... unless you install a fresh copy of the app on a new computer, of course. If you can, please do consider sending me some money!
             </x-single-feature>
         </div>
