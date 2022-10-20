@@ -7,6 +7,6 @@
             <p class="text-lg">{{ $slot }}</p>
         </div>
     </div>
-    <div class="lg:w-1/2 w-full items-center align-middle rounded-lg shadow-lg" style='background-color: #EEE; background-position: {{ $yPosition ?? 'center' }} center; background-image: url("{{ $imgSrc ?? '' }}"); background-repeat: no-repeat; background-size: cover; min-height: 250px;'>
+    <div class="lg:w-1/2 w-full items-center align-middle rounded-lg shadow-lg" style='background-color: #EEE; background-position: {{ $yPosition ?? 'center' }} center; background-image: url("{{ $imgSrc ?? '' }}"); background-repeat: no-repeat; background-size: cover; min-height: 260px;'>
     </div>
 </div>
