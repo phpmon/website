@@ -129,7 +129,13 @@
     <footer class="bg-blue-50 flex p-5 mt-6">
         <div class="flex flex-col m-auto max-w-xl space-y-2">
             <p class="text-sm">I hope you enjoy using the app. I hope you find it makes your day-to-day life a little more productive, enjoyable and most importantly... less stressful. Have a great day!</p>
-            <p class="text-xs pt-2">&copy; {{ date("Y") }}, Nico Verbruggen. All rights reserved.</p>
+            <p class="text-xs pt-2">
+                &copy; {{ date("Y") }}, Nico Verbruggen. All rights reserved.
+                <div class="hidden">
+                | <a rel="me" href="https://nicoverbruggen.be">Website</a>
+                | <a rel="me" href="https://phpc.social/@nicoverbruggen">Mastodon</a>
+                </div>
+            </p>
         </div>
     </footer>
 </div>
