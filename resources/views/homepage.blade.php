@@ -62,7 +62,7 @@
     <div class="px-4">
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
             <div class="max-w-3xl m-auto" style="position: relative;">
-                <img src="{{ url('/images/phpmon.jpg?v=ventura') }}" alt="PHP Monitor" class="m-auto max-w-3xl max-w-full bg-gray-100 rounded-xl shadow-lg">
+                <img src="{{ url('/images/phpmon.jpg?v=ventura+5.8') }}" alt="PHP Monitor" class="m-auto max-w-3xl max-w-full bg-gray-100 rounded-xl shadow-lg">
                 <span style="position: absolute; bottom: 20px; left: -10px;" class="bg-blue-900 text-white text-xl py-1 px-2 rounded rotate-2">Now works with macOS Ventura as well!</span>
             </div>
             <div class="max-w-2xl m-auto mt-12">
