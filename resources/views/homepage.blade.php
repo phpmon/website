@@ -30,7 +30,7 @@
     <meta name="msapplication-config" content="{{ url('/favicons/browserconfig.xml') }}">
     <meta name="theme-color" content="#ffffff">
     {{-- Fathom --}}
-    <script src="https://net.phpmon.app/script.js" data-site="HVPVBSJR" defer></script>
+    <script src="https://cdn.usefathom.com/script.js" data-site="HVPVBSJR" defer></script>
 </head>
 <body class="font-sans antialiased">
 <div>
@@ -41,7 +41,11 @@
                 <h1 class="text-5xl font-bold mb-3 text-blue-800">
                     Monitor and manage<br/>your PHP installations<br/> <span class="text-black">with ease</span>.
                 </h1>
-                <p class="text-2xl leading-9 mt-8"><b>PHP Monitor</b> is a lightweight, native Mac menu bar app that interacts with <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a>.</p>
+                <p class="text-2xl leading-9 mt-8"><b>PHP Monitor</b> is a lightweight, native Mac menu bar app that works best when accompanied by <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a>, but it also works without Valet.</p>
+                <p class="text-xl mt-8 leading-8">
+                    <span class="inline-block bg-blue-800 rounded-lg px-2 text-white">Version 6.0 now available!</span>
+                    With the latest big update, PHP Monitor now comes with <b>PHP Version Manager</b>, <b>Standalone Mode</b>, and more. I hope you all enjoy!
+                </p>
                 <div class="flex md:space-x-3 mt-6 flex-col md:flex-row">
                     <a href="{{ url()->route('releases') }}" class="mt-4 text-lg md:text-xl px-3 py-2 inline-block bg-white hover:bg-blue-200 text-black rounded-lg shadow-md flex">
                         <svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M13 13v5.585l1.828-1.828l1.415 1.415L12 22.414l-4.243-4.242l1.415-1.415L11 18.585V13h2zM12 2a7.001 7.001 0 0 1 6.954 6.194a5.5 5.5 0 0 1-.953 10.784v-2.014a3.5 3.5 0 1 0-1.112-6.91a5 5 0 1 0-9.777 0a3.5 3.5 0 0 0-1.292 6.88l.18.03v2.014a5.5 5.5 0 0 1-.954-10.784A7 7 0 0 1 12 2z"/></svg>
@@ -63,7 +67,6 @@
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
             <div class="max-w-3xl m-auto" style="position: relative;">
                 <img src="{{ url('/images/phpmon.jpg?v=ventura+5.8') }}" alt="PHP Monitor" class="m-auto max-w-3xl max-w-full bg-gray-100 rounded-xl shadow-lg">
-                <span style="position: absolute; bottom: 20px; left: -10px;" class="bg-blue-900 text-white text-xl py-1 px-2 rounded rotate-2">Now works with macOS Ventura as well!</span>
             </div>
             <div class="max-w-2xl m-auto mt-12">
                 <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-blue-800">Laravel</span> and <span class="text-blue-800">Symfony</span> projects. It's also great for <span class="text-blue-800">WordPress</span> or <span class="text-blue-800">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
@@ -92,8 +95,14 @@
                 </div>
             @endif
         </div>
-        <x-feature feature-title="A solid foundation." img-src="/images/valet.png">
-            PHP Monitor interacts with your local <b>Laravel Valet</b> installation. That means that PHP Monitor builds upon a solid and trusted foundation. If you've already got that installed, it's very easy to get started.
+        <x-feature feature-title="Works great with Laravel Valet." img-src="/images/valet.png">
+            PHP Monitor can interact with your local <b>Laravel Valet</b> installation. That means that PHP Monitor builds upon a solid and trusted foundation. If you've already got that installed, it's very easy to get started.
+        </x-feature>
+        <x-feature feature-title="Also works standalone." img-src="/images/standalone.jpg" class="lg:flex-row-reverse" y-position="top" new="true">
+            PHP Monitor <b>can also be used without</b> Laravel Valet. With the introduction of Standalone Mode some features will not be available, but I'm sure that you'll find the app a real help to your workflow if you don't use Laravel Valet.
+        </x-feature>
+        <x-feature feature-title="A GUI for managing PHP versions." img-src="/images/version-manager.jpg" new="true" y-position="top">
+            With the new PHP Version Manager, you can easily <b>install, upgrade and remove</b> individual PHP versions without needing to manually type or copy Homebrew commands. The app will also attempt to <b>automatically fix</b> broken PHP versions.
         </x-feature>
         <x-feature feature-title="Information at a glance." img-src="/images/menu-bar.jpg" y-position="top" class="lg:flex-row-reverse">
             PHP Monitor lives in your menu bar. From here, you can use the bulk of PHP Monitor's functionality, including the <b>global version switcher</b> as well as <b>services status</b> section.
@@ -111,7 +120,10 @@
             In addition to offering a global version switcher (which switches the PHP version for all of your projects), this app also includes support for Valet's <b>site isolation</b> feature. This allows you to use a specific version of PHP with a specific domain, all while retaining the globally linked PHP version.
         </x-feature>
         <x-feature feature-title="Determine compatibility." img-src="/images/phpinfo.jpg" y-position="top">
-            PHP Monitor will help you figure out if your sites are <b>compatible</b> with the <b>currently linked version of PHP</b>. You will receive suggestions when site isolation may be of use.
+            PHP Monitor will help you figure out if your sites are <b>compatible</b> with the <b>currently linked version of PHP</b>. You will receive suggestions when <b>site isolation</b> may be of use for a given domain.
+        </x-feature>
+        <x-feature feature-title="Small, fast and easy updates." img-src="/images/updater.jpg" y-position="bottom" class="lg:flex-row-reverse">
+            The app also comes with an optional (but very fast) <b>built-in updater</b>, which allows you to stay up-to-date with the latest developments and bug fixes, so you can have a seamless PHP switching experience.
         </x-feature>
 
         <div class="flex lg:flex-row flex-col m-auto max-w-5xl py-4 md:py-8 gap-x-10">
