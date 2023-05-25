@@ -68,7 +68,7 @@
             <div class="max-w-2xl m-auto mt-12">
                 <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-blue-800">Laravel</span> and <span class="text-blue-800">Symfony</span> projects. It's also great for <span class="text-blue-800">WordPress</span> or <span class="text-blue-800">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
                 <p class="mb-6 text-lg">This app is made with <span class="text-red-500">♥</span> by <a href="https://nicoverbruggen.be" class="text-blue-800">Nico Verbruggen</a>. It is open source and entirely free to use. Further development of this app is supported by <a class="text-blue-800" href="https://nicoverbruggen.be/sponsor">your donations</a>.
-                    You are also encouraged to join the  <a href="{{ url()->route('github') }}" class="text-blue-800">star the repository</a> on GitHub.
+                    You are also encouraged to <a href="{{ url()->route('github') }}" class="text-blue-800">star the repository</a> on GitHub.
                 </p>
             </div>
             @if (Cache::has('stargazers') && Cache::has('downloads'))
