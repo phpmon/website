@@ -33,13 +33,13 @@
 </head>
 <body class="font-sans antialiased">
 <div>
-    <div class="bg-blue-50 flex">
+    <div class="bg-blue-900 flex">
         <header class="flex flex-col m-auto max-w-xl py-5 md:py-8 lg:py-10 p-4">
             <div>
                 <x-logo size="100"></x-logo>
-                <h1 class="text-5xl font-bold mb-3">
+                <h1 class="text-5xl font-bold mb-3 text-white">
                     PHP Monitor<br/>
-                    <span class="text-blue-800">Early Access</span>
+                    <span class="text-blue-400">Early Access</span>
                 </h1>
             </div>
         </header>
