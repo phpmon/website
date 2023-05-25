@@ -41,7 +41,7 @@
                 <h1 class="text-5xl font-bold mb-3 text-blue-800">
                     Monitor and manage<br/>your PHP installations<br/> <span class="text-black">with ease</span>.
                 </h1>
-                <p class="text-2xl leading-9 mt-8"><b>PHP Monitor</b> is a lightweight, native Mac menu bar app that works best when accompanied by <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a>, but it also works without Valet.</p>
+                <p class="text-2xl leading-9 mt-8"><b>PHP Monitor</b> is a lightweight, native Mac menu bar app that works best when accompanied by <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a> (but it also works without it).</p>
                 <p class="text-xl mt-8 leading-8">
                     <span class="inline-block bg-blue-800 rounded-lg px-2 text-white">Version 6.0 now available!</span>
                     With the latest big update, PHP Monitor now comes with <b>PHP Version Manager</b>, <b>Standalone Mode</b>, and more. I hope you all enjoy!
@@ -70,8 +70,7 @@
             </div>
             <div class="max-w-2xl m-auto mt-12">
                 <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-blue-800">Laravel</span> and <span class="text-blue-800">Symfony</span> projects. It's also great for <span class="text-blue-800">WordPress</span> or <span class="text-blue-800">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
-                <p class="mb-6 text-lg">This app is made with <span class="text-red-500">♥</span> by <a href="https://nicoverbruggen.be" class="text-blue-800">Nico Verbruggen</a>. It is open source and entirely free to use. Further development of this app is supported by <a class="text-blue-800" href="https://nicoverbruggen.be/sponsor">your donations</a>.
-                    You are also encouraged to join the  <a href="{{ url()->route('github') }}" class="text-blue-800">star the repository</a> on GitHub.
+                <p class="mb-6 text-lg">This app is made with <span class="text-red-500">♥</span> by <a href="https://nicoverbruggen.be" class="text-blue-800">Nico Verbruggen</a>. It is open source and entirely free to use. Further development of this app is supported by <a class="text-blue-800" href="https://nicoverbruggen.be/sponsor">your donations</a>. You are also encouraged to <a href="{{ url()->route('github') }}" class="text-blue-800">star the repository</a> on GitHub.
                 </p>
             </div>
             @if (Cache::has('stargazers') && Cache::has('downloads'))

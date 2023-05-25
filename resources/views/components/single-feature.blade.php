@@ -3,6 +3,6 @@
         @isset ($featureTitle)
             <h3 class="text-blue-800 font-bold mb-2 uppercase">{{ $featureTitle }}</h3>
         @endisset
-        <p class="text-lg">{{ $slot }}</p>
+        <p class="text-gray-800">{{ $slot }}</p>
     </div>
 </div>
