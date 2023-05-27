@@ -65,7 +65,7 @@
     <div class="px-4">
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
             <div class="max-w-3xl m-auto" style="position: relative;">
-                <img src="{{ url('/images/phpmon.jpg?v=ventura+5.8') }}" alt="PHP Monitor" class="m-auto max-w-full bg-gray-100 rounded-xl shadow-lg">
+                <img src="{{ url('/images/marketing.jpg?v=6.0') }}" alt="PHP Monitor" class="m-auto max-w-full bg-gray-100 rounded-xl shadow-lg">
             </div>
             <div class="max-w-2xl m-auto mt-12">
                 <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-blue-800">Laravel</span> and <span class="text-blue-800">Symfony</span> projects. It's also great for <span class="text-blue-800">WordPress</span> or <span class="text-blue-800">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
