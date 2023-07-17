@@ -57,9 +57,6 @@
                     </a>
                 </div>
             </div>
-            <span class="absolute text-white tracking-tight rotate-12 font-bold"
-                  style="font-size: 700px; left: -100px; top: -150px;
-                  user-select: none; opacity: 3%;">6</span>
         </header>
     </div>
     <div class="px-4">
