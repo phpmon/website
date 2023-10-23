@@ -51,20 +51,42 @@
                 font-weight: bold;
             }
             h3 {
-                font-size: 15px;
+                font-size: 18px;
                 font-weight: bold;
-                margin: 16px 0;
+                margin: 32px 0 20px 0;
             }
             ul {
                 list-style: square;
+                line-height: 160%;
                 margin-left: 20px;
             }
             ul li {
-                margin-bottom: 4px;
+                margin-bottom: 10px;
+            }
+            a {
+                text-decoration: underline;
+                color: rgb(30, 58, 138);
+            }
+            p.warning {
+                margin-top: 15px;
+                background-color: #ffffd0;
+                padding: 25px;
+                line-height: 160%;
+            }
+            p.warning::before {
+                content: "⚠ ";
+            }
+            code {
+                background-color: #ebf9ff;
+                border: 1px solid #bed9ef;
+                border-radius: 3px;
+                padding: 2px 5px;
+                font-size: 14px;
             }
         </style>
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
             <h1>Changelog</h1>
+            <p class="py-4 font-bold">This is the changelog for the early access builds of PHP Monitor. You can gain access to these early access builds by <a href="https://github.com/sponsors/nicoverbruggen" target="_blank">sponsoring the project</a> on a monthly basis on GitHub.</p>
             {!! $content !!}
         </div>
     </div>
