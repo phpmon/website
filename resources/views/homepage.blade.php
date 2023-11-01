@@ -97,7 +97,7 @@
         <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
             <h2 class="text-3xl mb-3">
                 <span class="inline-block bg-blue-800 px-2 py-1 text-white text-2xl rounded">
-                    PHP Monitor 6.0 is now available.
+                    PHP Monitor 6 is now available.
                 </span>
             </h2>
             <div class="text-xl mt-8 leading-8">
