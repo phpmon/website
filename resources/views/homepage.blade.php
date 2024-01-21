@@ -97,12 +97,12 @@
         <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
             <h2 class="text-3xl mb-3">
                 <span class="inline-block bg-blue-800 px-2 py-1 text-white text-2xl rounded">
-                    PHP Monitor 6 is now available.
+                    PHP Monitor 7 is now available!
                 </span>
             </h2>
             <div class="text-xl mt-8 leading-8">
-                <p class="mb-4">With the latest major update, PHP Monitor now comes with the hotly anticipated <b>PHP Version Manager</b>, the often requested <b>Standalone Mode</b>, and additional improvements.</p>
-                <p class="text-base">Learn more in the <a href="https://nicoverbruggen.be/blog/phpmon-6.0-release" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below.</p>
+                <p class="mb-4">With the latest major update, PHP Monitor now lets you easily install and manage extensions for the various different versions of PHP you might be running.</p>
+                <p class="text-base">Learn more in the <a href="https://nicoverbruggen.be/blog/phpmon-7.0-release" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below.</p>
             </div>
         </div>
     </div>
@@ -110,11 +110,11 @@
         <x-feature feature-title="Works great with Laravel Valet." img-src="/images/valet.png">
             PHP Monitor can interact with your local <b>Laravel Valet</b> installation. That means that PHP Monitor builds upon a solid and trusted foundation. If you've already got that installed, it's very easy to get started.
         </x-feature>
-        <x-feature feature-title="Also works standalone." img-src="/images/standalone.jpg" class="lg:flex-row-reverse" y-position="top" new>
+        <x-feature feature-title="Also works standalone." img-src="/images/standalone.jpg" class="lg:flex-row-reverse" y-position="top">
             PHP Monitor <b>can also be used without</b> Laravel Valet. With the introduction of Standalone Mode some features will not be available, but I'm sure that you'll find the app a real help to your workflow if you don't use Laravel Valet.
         </x-feature>
-        <x-feature feature-title="A GUI for managing PHP versions." img-src="/images/version-manager.jpg" new y-position="top">
-            With the new PHP Version Manager, you can easily <b>install, upgrade and remove</b> individual PHP versions without needing to manually type or copy Homebrew commands. The app will also attempt to <b>automatically fix</b> broken PHP versions.
+        <x-feature feature-title="A GUI for managing PHP versions." img-src="/images/version-manager.jpg" y-position="top">
+            With the PHP Version Manager, you can easily <b>install, upgrade and remove</b> individual PHP versions without needing to manually type or copy Homebrew commands. The app will also attempt to <b>automatically fix</b> broken PHP versions.
         </x-feature>
         <x-feature feature-title="Information at a glance." img-src="/images/menu-bar.jpg" y-position="top" class="lg:flex-row-reverse">
             PHP Monitor lives in your menu bar. From here, you can use the bulk of PHP Monitor's functionality, including the <b>global version switcher</b> as well as <b>services status</b> section.
@@ -134,7 +134,10 @@
         <x-feature feature-title="Determine compatibility." img-src="/images/phpinfo.jpg" y-position="top">
             PHP Monitor will help you figure out if your sites are <b>compatible</b> with the <b>currently linked version of PHP</b>. You will receive suggestions when <b>site isolation</b> may be of use for a given domain.
         </x-feature>
-        <x-feature feature-title="Small, fast and easy updates." img-src="/images/updater.jpg" y-position="bottom" class="lg:flex-row-reverse" new>
+        <x-feature feature-title="Easily manage extensions." img-src="/images/extension-manager.jpg" class="lg:flex-row-reverse" y-position="top" new>
+            With the new PHP Extension Manager, you can easily <b>install and remove</b> PHP extensions, all <b>using a GUI</b>. It is also super easy to manage your extensions on a per PHP version basis!
+        </x-feature>
+        <x-feature feature-title="Small, fast and easy updates." img-src="/images/updater.jpg" y-position="bottom">
             The app also comes with an optional (but very fast) <b>built-in updater</b>, which allows you to stay up-to-date with the latest developments and bug fixes, so you can have a seamless PHP switching experience.
         </x-feature>
         <div class="flex lg:flex-row flex-col m-auto max-w-5xl py-4 md:py-8 gap-x-10">
