@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
+    #[\Override]
     public function boot()
     {
         $this->routes(function () {

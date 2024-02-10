@@ -19,7 +19,7 @@ class Kernel extends HttpKernel
         'web' => [\Illuminate\Routing\Middleware\SubstituteBindings::class],
     ];
 
-    protected $routeMiddleware = [
+    protected $middlewareAliases = [
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
