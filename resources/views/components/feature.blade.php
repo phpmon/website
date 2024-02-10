@@ -3,8 +3,8 @@
         <div class="flex flex-col">
             @isset ($featureTitle)
                 <h3 class="text-blue-800 font-bold text-xl mb-5 border-b-blue-300 border-b-2 pb-2 inline-block">
-                    @isset($new)
-                        <span class="bg-blue-800 text-white px-2 py-1 rounded-xl mr-1 text-sm relative bottom-0.5">NEW</span>
+                    @isset($badge)
+                        <span class="bg-blue-800 text-white px-2 py-1 rounded-xl mr-1 text-sm relative bottom-0.5">{{ \Illuminate\Support\Str::upper($badge) }}</span>
                     @endisset
                     {{ $featureTitle }}
                 </h3>
@@ -12,6 +12,6 @@
             <p class="text-lg text-gray-800">{{ $slot }}</p>
         </div>
     </div>
-    <div class="lg:w-1/2 w-full items-center align-middle rounded-lg shadow-lg" style='background-color: #EEE; background-position: {{ $yPosition ?? 'center' }} center; background-image: url("{{ $imgSrc ?? '' }}"); background-repeat: no-repeat; background-size: cover; min-height: 260px;'>
+    <div class="lg:w-1/2 w-full items-center align-middle rounded-lg shadow-lg" style='background-color: #EEE; background-position: {{ $yPosition ?? 'center' }} {{ $xPosition ?? 'center' }}; background-image: url("{{ $imgSrc ?? '' }}"); background-repeat: no-repeat; background-size: cover; min-height: 260px;'>
     </div>
 </div>
