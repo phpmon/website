@@ -81,7 +81,9 @@
                         </p>
                         <p class="text-xl flex items-center space-x-1 text-gray-700">
                             <svg width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M7 20.981a6.5 6.5 0 0 1-2.936-12a8.001 8.001 0 0 1 15.872 0a6.5 6.5 0 0 1-2.936 12V21H7v-.019zM13 12V8h-2v4H8l4 5l4-5h-3z"/></svg>
-                            <strong>{{ round(Cache::get('downloads'), -3) / 1000 }}k</strong>
+                            <strong>
+                                {{ round(Cache::get('downloads'), -3) / 1000 }}k
+                            </strong>
                             <span>total downloads</span>
                         </p>
                     </div>
@@ -93,7 +95,6 @@
             </div>
         </div>
     </div>
-    <!-- ALMOST THERE!
     <div class="bg-blue-50 flex p-5 py-10 my-6">
         <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
             <h2 class="text-3xl mb-3">
@@ -103,11 +104,10 @@
             </h2>
             <div class="text-xl mt-8 leading-8">
                 <p class="mb-4">With the latest major update, PHP Monitor now lets you easily install and manage extensions for the various different versions of PHP you might be running.</p>
-                <p class="text-base">Learn more in the <a href="https://nicoverbruggen.be/blog/phpmon-7.0-release" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below.</p>
+                <p class="text-base mb-4">Learn more in the <a href="https://nicoverbruggen.be/blog/phpmon-7.0" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below.</p>
             </div>
         </div>
     </div>
-    -->
     <div class="px-4">
         <x-feature feature-title="Totally free & open source." y-position="top" x-position="left" class="lg:flex-row-reverse" img-src="/images/oss.png?v=7">
              PHP Monitor's source code is, unlike other proprietary products, entirely <b>open source</b>. Also, all features that are part of PHP Monitor are available <b>entirely free of charge</b>, so you don't need to pay for any walled-off features. How great is that?
@@ -157,8 +157,8 @@
             <p class="text-xs pt-2">
                 &copy; {{ date("Y") }}, Nico Verbruggen. All rights reserved.
                 <div class="hidden">
-                | <a rel="me" href="https://nicoverbruggen.be">Website</a>
-                | <a rel="me" href="https://phpc.social/@nicoverbruggen">Mastodon</a>
+                    | <a rel="me" href="https://nicoverbruggen.be">Website</a>
+                    | <a rel="me" href="https://phpc.social/@nicoverbruggen">Mastodon</a>
                 </div>
             </p>
         </div>
