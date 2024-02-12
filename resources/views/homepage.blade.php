@@ -104,7 +104,7 @@
             </h2>
             <div class="text-xl mt-8 leading-8">
                 <p class="mb-4">With the latest major update, PHP Monitor now lets you easily install and manage extensions for the various different versions of PHP you might be running.</p>
-                <p class="text-base mb-4">Learn more in the <a href="https://nicoverbruggen.be/blog/phpmon-7.0" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below.</p>
+                <p class="text-base mb-4">Learn more in the <a href="https://nicoverbruggen.be/blog/phpmon-7" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below.</p>
             </div>
         </div>
     </div>
