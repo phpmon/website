@@ -133,7 +133,7 @@
         <x-feature feature-title="Determine compatibility." img-src="/images/phpinfo.jpg?v=7" y-position="top">
             PHP Monitor will help you figure out if your sites are <b>compatible</b> with the <b>currently linked version of PHP</b>. You will receive suggestions when <b>site isolation</b> may be of use for a given domain.
         </x-feature>
-        <x-feature feature-title="Easily manage PHP extensions." img-src="/images/extensions.jpg?v=7" class="lg:flex-row-reverse" y-position="top" badge="Coming soon">
+        <x-feature feature-title="Easily manage PHP extensions." img-src="/images/extensions.jpg?v=7" class="lg:flex-row-reverse" y-position="top" badge="new">
             With the new PHP Extension Manager, you can easily <b>install and remove</b> PHP extensions, all <b>using a GUI</b>. It is also super easy to manage your extensions on a per PHP version basis via the Domains window (you can right-click on a site and toggle extensions easily).
         </x-feature>
         <x-feature feature-title="Small, fast and easy updates." img-src="/images/updater.jpg?v=7" y-position="bottom">
