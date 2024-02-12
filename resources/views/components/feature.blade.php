@@ -5,10 +5,7 @@
                 <h3 class="text-blue-800 font-bold text-xl mb-5
                 border-b-blue-300 border-b-2 pb-2 inline-block">
                     @isset($badge)
-                        <span class="bg-blue-800 text-white px-2 py-1
-                        rounded-xl mr-1 text-sm relative bottom-0.5">
-                            {{ \Illuminate\Support\Str::upper($badge) }}
-                        </span>
+                        <span class="bg-blue-800 text-white px-2 py-1 rounded-xl mr-1 text-sm relative bottom-0.5">{{ \Illuminate\Support\Str::upper($badge) }}</span>
                     @endisset
                     {{ $featureTitle }}
                 </h3>
