@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http;
 
-class Redirection
+final readonly class Redirection
 {
     public function __construct(
-        public readonly string $url,
-        public readonly string $target,
-        public readonly string $name
+        public string $url,
+        public string $target,
+        public string $name
     ) {
     }
 

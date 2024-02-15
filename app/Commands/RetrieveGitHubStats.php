@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Console\Commands;
+declare(strict_types=1);
+
+namespace App\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
-class RetrieveGitHubData extends Command
+final class RetrieveGitHubStats extends Command
 {
     protected $signature = 'github:fetch';
 
