@@ -2,12 +2,17 @@
 
 declare(strict_types=1);
 
-$app = new Illuminate\Foundation\Application(
-    $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
-);
+use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Configuration\Exceptions;
+use Illuminate\Foundation\Configuration\Middleware;
 
-$app->singleton(Illuminate\Contracts\Http\Kernel::class, App\Http\Kernel::class);
-$app->singleton(Illuminate\Contracts\Console\Kernel::class, App\Console\Kernel::class);
-$app->singleton(Illuminate\Contracts\Debug\ExceptionHandler::class, Illuminate\Foundation\Exceptions\Handler::class);
-
-return $app;
+return Application::configure(basePath: dirname(__DIR__))
+    ->withRouting(
+        web: __DIR__ . '/../app/routes.php',
+        commands: __DIR__ . '/../app/console.php',
+        health: '/up'
+    )
+    ->withCommands([__DIR__ . '/../app/Commands'])
+    ->withMiddleware(function (Middleware $middleware) {})
+    ->withExceptions(function (Exceptions $exceptions) {})
+    ->create();
