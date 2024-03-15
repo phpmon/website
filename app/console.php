@@ -4,4 +4,4 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Schedule;
 
-Schedule::call('github:fetch')->everySixHours();
+Schedule::command('github:fetch')->everySixHours();
