@@ -10,8 +10,7 @@ final readonly class Redirection
         public string $url,
         public string $target,
         public string $name
-    ) {
-    }
+    ) {}
 
     public static function named($name, $url, $target): Redirection
     {

@@ -12,7 +12,7 @@ Route::get('/early-access/release-notes', function () {
     $path = public_path('builds/early-access/sponsors/changelog.md');
     if (file_exists($path)) {
         return view('changelog', [
-            'content' => (new CommonMarkConverter())
+            'content' => (new CommonMarkConverter)
                 ->convert(file_get_contents($path)),
         ]);
     } else {
