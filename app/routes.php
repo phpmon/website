@@ -28,6 +28,7 @@ collect([
     Redirection::named('sponsor.now', '/sponsor/now', 'https://nicoverbruggen.be/sponsor#pay-now'),
     Redirection::named('wiki.pre-release', '/prerelease-php', 'https://github.com/nicoverbruggen/phpmon/wiki/Supporting-pre-release-versions-of-PHP'),
     Redirection::named('wiki.php-unavailable', '/php-unavailable', 'https://github.com/nicoverbruggen/phpmon/wiki/Installing-or-upgrading-to-the-latest-version-of-PHP#why-is-a-php-version-marked-as-unavailable'),
+    Redirection::named('wiki.php-upgrade', '/php-upgrade', 'https://github.com/nicoverbruggen/phpmon/wiki/Installing-or-upgrading-to-the-latest-version-of-PHP'),
 ])->each(function (Redirection $r) {
     Route::get($r->url, fn () => redirect()->to($r->target))->name($r->name);
 });
