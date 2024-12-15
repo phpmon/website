@@ -29,6 +29,9 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="{{ url('/favicons/browserconfig.xml') }}">
     <meta name="theme-color" content="#ffffff">
+    {{-- Umami --}}
+    <script defer src="https://umami.nicoverbruggen.be/script.js" data-website-id="a94ced9c-2bdd-4a02-9c52-f1b8d34aba89"></script>
+    {{-- Fathom --}}
     <script src="https://cdn.usefathom.com/script.js" data-site="HVPVBSJR" defer></script>
 </head>
 <body class="font-sans antialiased">
