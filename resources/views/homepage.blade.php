@@ -14,11 +14,6 @@
     {{-- OG --}}
     <meta property="og:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
     <meta property="og:image" content="{{ url('/images/phpmon-social.png') }}">
-    {{-- Twitter --}}
-    <meta name="twitter:image:src" content="{{ url('/images/phpmon-social.png') }}">
-    <meta name="twitter:site" content="@nicoverbruggen">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
     {{-- Favicons --}}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url('/favicons/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url('/favicons/favicon-32x32.png') }}">
@@ -98,13 +93,13 @@
     <div class="bg-blue-50 flex p-5 py-10 my-6">
         <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
             <h2 class="text-3xl mb-3">
-                <span class="inline-block bg-blue-800 px-2 py-1 text-white text-2xl rounded">
-                    PHP Monitor 7 is now available!
+                <span class="inline-block bg-blue-800 px-2 py-1 text-white text-2xl rounded font-bold">
+                    PHP Monitor 7.2 is now available!
                 </span>
             </h2>
             <div class="text-xl mt-8 leading-8">
                 <p class="mb-4">With the latest major update, PHP Monitor now lets you easily install and manage extensions for the various different versions of PHP you might be running.</p>
-                <p class="text-base mb-4">Learn more in the <a href="https://nicoverbruggen.be/blog/phpmon-7" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below.</p>
+                <p class="text-base mb-4">Learn more about PHP Monitor 7 in the <a href="https://nicoverbruggen.be/blog/phpmon-7" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below. You can also check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-blue-800">latest release</a> on GitHub.</p>
             </div>
         </div>
     </div>

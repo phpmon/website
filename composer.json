@@ -6,20 +6,20 @@
     "require": {
         "php": "^8.3",
         "guzzlehttp/guzzle": "^7.9.2",
-        "laravel/framework": "^11.36.1",
-        "laravel/tinker": "^2.10.0",
+        "laravel/framework": "^11.44.2",
+        "laravel/tinker": "^2.10.1",
         "league/commonmark": "^2.6.1"
     },
     "require-dev": {
         "driftingly/rector-laravel": "^1.2.6",
         "fakerphp/faker": "^1.24.1",
-        "laravel/pint": "^1.19.0",
-        "laravel/sail": "^1.39.1",
+        "laravel/pint": "^1.21.2",
+        "laravel/sail": "^1.41.0",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.5",
-        "phpunit/phpunit": "^10.5.40",
+        "phpunit/phpunit": "^10.5.45",
         "rector/rector": "^1.2.10",
-        "spatie/laravel-ignition": "^2.9.0"
+        "spatie/laravel-ignition": "^2.9.1"
     },
     "autoload": {
         "psr-4": {
