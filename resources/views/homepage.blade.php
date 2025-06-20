@@ -94,12 +94,12 @@
         <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
             <h2 class="text-3xl mb-3">
                 <span class="inline-block bg-blue-800 px-2 py-1 text-white text-2xl rounded font-bold">
-                    PHP Monitor 7.2 is now available!
+                    PHP Monitor 25.06 is now available!
                 </span>
             </h2>
             <div class="text-xl mt-8 leading-8">
-                <p class="mb-4">With the latest major update, PHP Monitor now lets you easily install and manage extensions for the various different versions of PHP you might be running.</p>
-                <p class="text-base mb-4">Learn more about PHP Monitor 7 in the <a href="https://nicoverbruggen.be/blog/phpmon-7" class="text-blue-800">dedicated blog post</a> on my personal website, or explore all of PHP Monitor's features below. You can also check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-blue-800">latest release</a> on GitHub.</p>
+                <p class="mb-4">With the latest major update, PHP Monitor now features some new visual changes, including added icons to the menu bar items for visual clarity.</p>
+                <p class="text-base mb-4">With this update, the app also switches to a new versioning system. An update with full support for macOS Tahoe will follow later this year. You can also check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-blue-800">latest release notes</a> on GitHub for more details.</p>
             </div>
         </div>
     </div>
