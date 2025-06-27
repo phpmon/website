@@ -18,7 +18,7 @@ final class RetrieveGitHubStats extends Command
     public function handle()
     {
         $repositoryResponse = Http::get('https://api.github.com/repos/nicoverbruggen/phpmon');
-        $releasesResponse = Http::get('https://api.github.com/repos/nicoverbruggen/phpmon/releases');
+        $releasesResponse = Http::get('https://api.github.com/repos/nicoverbruggen/phpmon/releases?per_page=100');
 
         if ($repositoryResponse->failed()) {
             Log::error($repositoryResponse->body());
