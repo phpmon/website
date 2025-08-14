@@ -9,7 +9,13 @@ module.exports = {
     fontFamily: {
       'sans': ['Inter', 'sans-serif']
     },
-    extend: {},
+    extend: {
+        colors: {
+            'primary': '#4894FC',
+            'light': '#BBD8FD',
+            'dim': '#ECF4FE'
+        }
+    },
   },
   plugins: [],
 }

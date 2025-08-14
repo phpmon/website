@@ -8,6 +8,6 @@ See `composer.json`.
 
 ## Tests
 
-	composer verify
+    composer verify
 
 This will run Rector, Pint and check if all tests pass.

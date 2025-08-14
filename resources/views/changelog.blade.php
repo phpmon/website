@@ -14,11 +14,6 @@
     {{-- OG --}}
     <meta property="og:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
     <meta property="og:image" content="{{ url('/images/phpmon-social.png') }}">
-    {{-- Twitter --}}
-    <meta name="twitter:image:src" content="{{ url('/images/phpmon-social.png') }}">
-    <meta name="twitter:site" content="@nicoverbruggen">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
     {{-- Favicons --}}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,19 +24,22 @@
 </head>
 <body class="font-sans antialiased">
 <div>
-    <div class="bg-blue-900 flex">
+    <div class="bg-dim flex">
         <header class="flex flex-col m-auto max-w-xl py-5 md:py-8 lg:py-10 p-4">
-            <div>
-                <x-logo size="100"></x-logo>
-                <h1 class="text-5xl font-bold mb-3 text-white">
-                    PHP Monitor<br/>
-                    <span class="text-blue-400">Early Access</span>
+            <div class="flex">
+                <x-logo size="95"></x-logo>
+                <h1 class="text-xl font-bold mb-2 text-white mt-3">
+                    <span class="text-black text-3xl">PHP Monitor</span><br/>
+                    <span class="text-primary text-3xl">Early Access</span>
                 </h1>
             </div>
         </header>
     </div>
     <div class="px-4">
         <style>
+            .infobox {
+                border-radius: 5px;
+            }
             h1 {
                 font-size: 26px;
                 font-weight: bold;
@@ -61,7 +59,7 @@
             }
             a {
                 text-decoration: underline;
-                color: rgb(30, 58, 138);
+                color: #4894FC;
             }
             p.warning {
                 margin-top: 15px;
@@ -81,8 +79,12 @@
             }
         </style>
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
+            <div class="p-4 mb-8 bg-yellow-100 py-4 infobox shadow-sm">
+                <p>This is the changelog for the early access builds of PHP Monitor. You can gain access to these builds by <a href="https://github.com/sponsors/nicoverbruggen" target="_blank">sponsoring the project</a> on a monthly basis on GitHub for as low as $5 per month.</p>
+                <p class="text-sm mt-2 text-gray-500">You also get early access to a private repository, and I will prioritize issues opened by you if you are sponsor.</p>
+            </div>
+
             <h1>Changelog</h1>
-            <p class="py-4 font-bold">This is the changelog for the early access builds of PHP Monitor. You can gain access to these early access builds by <a href="https://github.com/sponsors/nicoverbruggen" target="_blank">sponsoring the project</a> on a monthly basis on GitHub.</p>
             {!! $content !!}
         </div>
     </div>

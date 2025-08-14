@@ -2,8 +2,8 @@
     <div class="lg:w-1/2 w-full flex py-4 md:px-4 align-middle items-center">
         <div class="flex flex-col">
             @isset ($featureTitle)
-                <h3 class="text-blue-800 font-bold text-xl mb-5
-                border-b-blue-300 border-b-2 pb-2 inline-block">
+                <h3 class="text-primary font-bold text-xl mb-5
+                border-b-dim border-b-2 pb-1 inline-block">
                     @isset($badge)
                         <span class="bg-blue-800 text-white px-2 py-1 rounded-xl mr-1 text-sm relative bottom-0.5">{{ \Illuminate\Support\Str::upper($badge) }}</span>
                     @endisset
@@ -19,7 +19,7 @@
         background-image: url("{{ $imgSrc ?? '' }}");
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 260px;'
+        aspect-ratio: 2 / 1;'
     >
     </div>
 </div>

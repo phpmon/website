@@ -24,14 +24,18 @@
 </head>
 <body class="font-sans antialiased">
 <div>
-    <div class="bg-blue-900 flex">
+    <div class="bg-primary p-4 text-center text-white">
+        Support PHP Monitor with a monthly sponsorship of $5 or more on GitHub for early access builds!
+        <a class="underline font-bold" href="/early-access/release-notes">Learn more</a>
+    </div>
+    <div class="bg-dim flex">
         <header class="flex flex-col m-auto max-w-xl py-5 md:py-8 lg:py-10 p-4">
             <div>
                 <x-logo size="100"></x-logo>
-                <h1 class="text-5xl font-bold mb-3 text-white">
-                    Monitor and manage<br/>your PHP installations<br/> <span class="text-blue-400">with ease</span>.
+                <h1 class="text-5xl font-bold mb-3 text-black">
+                    Monitor and manage<br/>your PHP installations<br/> <span class="text-primary">with ease</span>.
                 </h1>
-                <p class="text-2xl leading-9 mt-8 text-white"><b>PHP Monitor</b> is a lightweight, native Mac menu bar app that works best when accompanied by <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a> (but it also works without it).</p>
+                <p class="text-2xl leading-9 mt-8 text-black"><b>PHP Monitor</b> is a lightweight, native Mac menu bar app that works best when accompanied by <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a> (but it also works without it).</p>
                 <div class="flex md:space-x-3 mt-6 flex-col md:flex-row">
                     <a href="{{ url()->route('releases') }}" class="mt-4 text-lg md:text-xl px-4 py-2 bg-green-400 hover:bg-green-500 text-black hover:text-gray-900 rounded-lg shadow-md flex">
                         <svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M13 13v5.585l1.828-1.828l1.415 1.415L12 22.414l-4.243-4.242l1.415-1.415L11 18.585V13h2zM12 2a7.001 7.001 0 0 1 6.954 6.194a5.5 5.5 0 0 1-.953 10.784v-2.014a3.5 3.5 0 1 0-1.112-6.91a5 5 0 1 0-9.777 0a3.5 3.5 0 0 0-1.292 6.88l.18.03v2.014a5.5 5.5 0 0 1-.954-10.784A7 7 0 0 1 12 2z"/></svg>
@@ -52,10 +56,10 @@
     <div class="px-4">
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
             <div class="max-w-3xl m-auto" style="position: relative;">
-                <img src="{{ url('/images/marketing.jpg?v=7.0') }}" alt="PHP Monitor" class="m-auto max-w-full bg-gray-100 rounded-xl shadow-lg">
+                <img src="{{ url('/images/marketing.jpg?v=2025.07') }}" alt="PHP Monitor" class="m-auto max-w-full bg-gray-100 rounded-xl shadow-lg">
             </div>
             <div class="max-w-2xl m-auto mt-12">
-                <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-blue-800">Laravel</span> and <span class="text-blue-800">Symfony</span> projects. It's also great for <span class="text-blue-800">WordPress</span> or <span class="text-blue-800">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
+                <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-primary">Laravel</span> and <span class="text-primary">Symfony</span> projects. It's also great for <span class="text-primary">WordPress</span> or <span class="text-primary">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
             </div>
             @if (Cache::has('stargazers') && Cache::has('downloads'))
                 <div class="max-w-2xl m-auto mt-6 pb-6 space-y-3 border border-b-gray-200 rounded-lg px-8 py-4 shadow-lg">
@@ -80,64 +84,64 @@
                 </div>
             @endif
             <div class="max-w-2xl m-auto mt-12">
-                <p class="mb-6 text-lg">This app is made with <span class="text-red-500">♥</span> by <a href="https://nicoverbruggen.be" class="text-blue-800">Nico Verbruggen</a>. It is open source and entirely free to use. Further development of this app is supported by <a class="text-blue-800" href="https://nicoverbruggen.be/sponsor">your donations</a>. You are also encouraged to <a href="{{ url()->route('github') }}" class="text-blue-800">star the repository</a> on GitHub.</p>
+                <p class="mb-6 text-lg">This app is made with <span class="text-red-500">♥</span> by <a href="https://nicoverbruggen.be" class="text-primary">Nico Verbruggen</a>. It is open source and entirely free to use. Further development of this app is supported by <a class="text-primary" href="https://nicoverbruggen.be/sponsor">your donations</a>. You are also encouraged to <a href="{{ url()->route('github') }}" class="text-primary">star the repository</a> on GitHub.</p>
                 <p class="text-gray-500 leading-6">Your stars and sponsorships are very much appreciated. Thanks to your support, the app has seen a steady stream of updates with new features and bugfixes over the last three years, and will continue to be supported as long as it makes sense to do so.</p>
             </div>
         </div>
     </div>
-    <div class="bg-blue-50 flex p-5 py-10 my-6">
+    <div class="bg-dim flex p-5 py-10 my-6">
         <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
             <h2 class="text-3xl mb-3">
-                <span class="inline-block bg-blue-800 px-2 py-1 text-white text-2xl rounded font-bold">
+                <span class="inline-block bg-primary px-2 py-1 text-white text-2xl rounded font-bold">
                     PHP Monitor 25.07 is now available!
                 </span>
             </h2>
             <div class="text-xl mt-8 leading-8">
                 <p class="mb-4">I plan on releasing monthly updates with minor improvements and quality of life changes for the foreseeable future to better support the app.</p>
-                <p class="text-base mb-4">An update with full support for macOS Tahoe will follow later this year. You can also check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-blue-800">latest release notes</a> on GitHub for more details.</p>
+                <p class="text-base mb-4">An update with full support for macOS Tahoe will follow later this year. You can also check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-primary">latest release notes</a> on GitHub for more details.</p>
             </div>
         </div>
     </div>
     <div class="px-4">
-        <x-feature feature-title="Totally free & open source." y-position="top" x-position="left" class="lg:flex-row-reverse" img-src="/images/oss.png?v=7">
+        <x-feature feature-title="Totally free & open source" y-position="top" x-position="left" class="lg:flex-row-reverse" img-src="/images/oss.png?v=7">
              PHP Monitor's source code is, unlike other proprietary products, entirely <b>open source</b>. Also, all features that are part of PHP Monitor are available <b>entirely free of charge</b>, so you don't need to pay for any walled-off features. How great is that?
         </x-feature>
-        <x-feature feature-title="A GUI for managing PHP versions." img-src="/images/version-manager.jpg?v=7" y-position="top">
+        <x-feature feature-title="A GUI for managing PHP versions" img-src="/images/version-manager.jpg?v=2025.07" y-position="top">
             With the PHP Version Manager, you can easily <b>install, upgrade and remove</b> individual PHP versions without needing to manually type or copy Homebrew commands. The app will also attempt to <b>automatically fix</b> broken PHP versions.
         </x-feature>
-        <x-feature feature-title="Information at a glance." img-src="/images/menu-bar.jpg?v=7" y-position="top" class="lg:flex-row-reverse">
+        <x-feature feature-title="Information at a glance" img-src="/images/menu-bar.jpg?v=2025.07" y-position="top" class="lg:flex-row-reverse">
             PHP Monitor lives in your menu bar. From here, you can use the bulk of PHP Monitor's functionality, including the <b>global version switcher</b> as well as <b>services status</b> section.<br/><br/>If everything runs fine it'll be obvious, but if things happen to go wrong PHP Monitor will warn you, and help you figure out what to do.
         </x-feature>
-        <x-feature feature-title="No more hunting for config files." img-src="/images/config.jpg?v=7" y-position="top">
+        <x-feature feature-title="No more hunting for config files" img-src="/images/config.jpg?v=2025.07" y-position="top">
             Sometimes you need to edit a <b>configuration file</b> or <b>toggle an extension</b>. But where are those pesky config files located again? From PHP Monitor's menu you can easily find them. Extensions can even be toggled with one click of the button!
         </x-feature>
-        <x-feature feature-title="All of your domains in a single list." img-src="/images/domains.jpg?v=7" y-position="top" class="lg:flex-row-reverse">
+        <x-feature feature-title="All of your domains in a single list" img-src="/images/domains.jpg?v=2025.07" y-position="top" class="lg:flex-row-reverse">
             Do you have many projects or legacy sites? No worries, the app includes a <b>domain list</b> that you can use to get a quick overview of all domains and proxies you have set up, as well as their PHP version, what type of project they are, and more.
         </x-feature>
-        <x-feature feature-title="Quickly link a new domain or proxy." img-src="/images/link-folder.jpg?v=7" y-position="top">
+        <x-feature feature-title="Quickly link a new domain or proxy" img-src="/images/link-folder.jpg?v=2025.07" y-position="top">
             You can easily <b>link or proxy</b> a folder: you can even easily customize the name of the domain and secure this new domain by simply checking a box. This will make these projects accessible as *.test domains on your system.
         </x-feature>
-        <x-feature feature-title="A different PHP version per domain." img-src="/images/isolation.jpg?v=7" y-position="bottom" class="lg:flex-row-reverse">
+        <x-feature feature-title="A different PHP version per domain" img-src="/images/isolation.jpg?v=2025.07" y-position="bottom" class="lg:flex-row-reverse">
             In addition to offering a global version switcher (which switches the PHP version for all of your projects), this app also includes support for Valet's <b>site isolation</b> feature. This allows you to use a specific version of PHP with a specific domain, all while retaining the globally linked PHP version.
         </x-feature>
-        <x-feature feature-title="Determine compatibility." img-src="/images/phpinfo.jpg?v=7" y-position="top">
+        <x-feature feature-title="Determine compatibility" img-src="/images/phpinfo.jpg?v=2025.07">
             PHP Monitor will help you figure out if your sites are <b>compatible</b> with the <b>currently linked version of PHP</b>. You will receive suggestions when <b>site isolation</b> may be of use for a given domain.
         </x-feature>
-        <x-feature feature-title="Easily manage PHP extensions." img-src="/images/extensions.jpg?v=7" class="lg:flex-row-reverse" y-position="top" badge="new">
+        <x-feature feature-title="Easily manage PHP extensions" img-src="/images/extensions.jpg?v=2025.07" class="lg:flex-row-reverse" y-position="top">
             With the new PHP Extension Manager, you can easily <b>install and remove</b> PHP extensions, all <b>using a GUI</b>. It is also super easy to manage your extensions on a per PHP version basis via the Domains window (you can right-click on a site and toggle extensions easily).
         </x-feature>
-        <x-feature feature-title="Small, fast and easy updates." img-src="/images/updater.jpg?v=7" y-position="bottom">
+        <x-feature feature-title="Small, frequent, fast and easy updates" img-src="/images/updater.jpg?v=2025.07" y-position="bottom">
             The app also comes with an optional (but very fast) <b>built-in updater</b>, which allows you to stay up-to-date with the latest developments and bug fixes, so you can have a seamless PHP switching experience.
         </x-feature>
         <div class="flex lg:flex-row flex-col m-auto max-w-5xl py-4 md:py-8 gap-x-10">
-            <x-single-feature feature-title="A tiny footprint.">
+            <x-single-feature feature-title="A tiny footprint">
                 Laravel Valet is a lightweight solution that is much leaner than Docker, and PHP Monitor as a companion tool uses equally few system resources. It is light on RAM and its CPU usage is negligible.
             </x-single-feature>
-            <x-single-feature feature-title="Privacy conscious.">
+            <x-single-feature feature-title="Privacy conscious">
                 No tracking. No bullshit. Nothing to worry about. The only outbound connection PHP Monitor makes is a check to see if a newer version is available, and you can disable it.
             </x-single-feature>
-            <x-single-feature feature-title="No nagging for donations.">
-                PHP Monitor will only ask you to donate <em>once</em>, and should never ask you again... unless you install a fresh copy of the app on a new computer, of course. If you can, please do consider sending me some money!
+            <x-single-feature feature-title="No nagging for donations">
+                PHP Monitor will only ask you to donate <em>once</em>, after installing it on a new computer. If you can afford it, donations are very welcome!
             </x-single-feature>
         </div>
     </div>
