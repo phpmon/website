@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Monitor</title>
+    <title>Early Access (Release Notes) – PHP Monitor</title>
     <meta name="description" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
     {{-- Web Fonts --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,7 +84,7 @@
                 <p class="text-sm mt-2 text-gray-500">You also get early access to a private repository, and I will prioritize issues opened by you if you are sponsor.</p>
             </div>
 
-            <h1>Changelog</h1>
+            <h1>Release Notes</h1>
             {!! $content !!}
         </div>
     </div>
