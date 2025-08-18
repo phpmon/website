@@ -57,6 +57,14 @@
             ul li {
                 margin-bottom: 10px;
             }
+            ul li ul {
+                font-size: 14px;
+                margin-top: 10px;
+                color: #555;
+            }
+            ul li ul li code {
+                font-size: 12px;
+            }
             a {
                 text-decoration: underline;
                 color: #4894FC;
