@@ -69,14 +69,20 @@
                 text-decoration: underline;
                 color: #4894FC;
             }
-            p.warning {
+            p.info {
                 margin-top: 15px;
-                background-color: #ffffd0;
+                background-color: #e4f5f8;
                 padding: 25px;
                 line-height: 160%;
+                border-radius: 5px;
             }
-            p.warning::before {
-                content: "⚠ ";
+            p.warning {
+                position: relative;
+                margin-top: 15px;
+                background-color: #ffcfc3;
+                padding: 25px;
+                line-height: 160%;
+                border-radius: 5px;
             }
             code {
                 background-color: #ebf9ff;
