@@ -93,12 +93,12 @@
         <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
             <h2 class="text-3xl mb-3">
                 <span class="inline-block bg-primary px-2 py-1 text-white text-2xl rounded font-bold">
-                    PHP Monitor 25.09 is now available!
+                    PHP Monitor 25.10 is now available!
                 </span>
             </h2>
             <div class="text-xl mt-8 leading-8">
-                <p class="mb-4">I plan on releasing monthly updates with minor improvements and quality of life changes for the foreseeable future to better support the app.</p>
-                <p class="text-base mb-4">An update with full support for PHP 8.5 will follow later this year. You can also check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-primary">latest release notes</a> on GitHub for more details.</p>
+                <p class="mb-4">I am releasing monthly updates with minor improvements and quality of life changes for the foreseeable future to better support the app.</p>
+                <p class="text-base mb-4">An update with full support for PHP 8.5 will follow later this November. You can also check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-primary">latest release notes</a> on GitHub for more details.</p>
             </div>
         </div>
     </div>
