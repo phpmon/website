@@ -49,6 +49,13 @@
                 font-weight: bold;
                 margin: 32px 0 20px 0;
             }
+            h4 {
+                font-size: 16px;
+                color: #939393;
+                border-bottom: 1px solid #b6b6b6;
+                font-weight: bold;
+                margin: 0 0 15px;
+            }
             ul {
                 list-style: square;
                 line-height: 160%;
