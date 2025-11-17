@@ -56,7 +56,7 @@
     <div class="px-4">
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
             <div class="max-w-3xl m-auto" style="position: relative;">
-                <img src="{{ url('/images/marketing.jpg?v=2025.07') }}" alt="PHP Monitor" class="m-auto max-w-full bg-gray-100 rounded-xl shadow-lg">
+                <img src="{{ url('/images/marketing.jpg?v=2025.11') }}" alt="PHP Monitor" class="m-auto max-w-full bg-gray-100 rounded-xl shadow-lg">
             </div>
             <div class="max-w-2xl m-auto mt-12">
                 <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-primary">Laravel</span> and <span class="text-primary">Symfony</span> projects. It's also great for <span class="text-primary">WordPress</span> or <span class="text-primary">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
@@ -106,31 +106,31 @@
         <x-feature feature-title="Totally free & open source" y-position="top" x-position="left" class="lg:flex-row-reverse" img-src="/images/oss.png?v=7">
              PHP Monitor's source code is, unlike other proprietary products, entirely <b>open source</b>. Also, all features that are part of PHP Monitor are available <b>entirely free of charge</b>, so you don't need to pay for any walled-off features. How great is that?
         </x-feature>
-        <x-feature feature-title="A GUI for managing PHP versions" img-src="/images/version-manager.jpg?v=2025.07" y-position="top">
+        <x-feature feature-title="A GUI for managing PHP versions" img-src="/images/version-manager.jpg?v=2025.11" y-position="top">
             With the PHP Version Manager, you can easily <b>install, upgrade and remove</b> individual PHP versions without needing to manually type or copy Homebrew commands. The app will also attempt to <b>automatically fix</b> broken PHP versions.
         </x-feature>
-        <x-feature feature-title="Information at a glance" img-src="/images/menu-bar.jpg?v=2025.07" y-position="top" class="lg:flex-row-reverse">
+        <x-feature feature-title="Information at a glance" img-src="/images/menu-bar.jpg?v=2025.11" y-position="top" class="lg:flex-row-reverse">
             PHP Monitor lives in your menu bar. From here, you can use the bulk of PHP Monitor's functionality, including the <b>global version switcher</b> as well as <b>services status</b> section.<br/><br/>If everything runs fine it'll be obvious, but if things happen to go wrong PHP Monitor will warn you, and help you figure out what to do.
         </x-feature>
-        <x-feature feature-title="No more hunting for config files" img-src="/images/config.jpg?v=2025.07" y-position="top">
+        <x-feature feature-title="No more hunting for config files" img-src="/images/config.jpg?v=2025.11" y-position="top">
             Sometimes you need to edit a <b>configuration file</b> or <b>toggle an extension</b>. But where are those pesky config files located again? From PHP Monitor's menu you can easily find them. Extensions can even be toggled with one click of the button!
         </x-feature>
-        <x-feature feature-title="All of your domains in a single list" img-src="/images/domains.jpg?v=2025.07" y-position="top" class="lg:flex-row-reverse">
+        <x-feature feature-title="All of your domains in a single list" img-src="/images/domains.jpg?v=2025.11" y-position="top" class="lg:flex-row-reverse">
             Do you have many projects or legacy sites? No worries, the app includes a <b>domain list</b> that you can use to get a quick overview of all domains and proxies you have set up, as well as their PHP version, what type of project they are, and more.
         </x-feature>
-        <x-feature feature-title="Quickly link a new domain or proxy" img-src="/images/link-folder.jpg?v=2025.07" y-position="top">
+        <x-feature feature-title="Quickly link a new domain or proxy" img-src="/images/link-folder.jpg?v=2025.11" y-position="top">
             You can easily <b>link or proxy</b> a folder: you can even easily customize the name of the domain and secure this new domain by simply checking a box. This will make these projects accessible as *.test domains on your system.
         </x-feature>
-        <x-feature feature-title="A different PHP version per domain" img-src="/images/isolation.jpg?v=2025.07" y-position="bottom" class="lg:flex-row-reverse">
+        <x-feature feature-title="A different PHP version per domain" img-src="/images/isolation.jpg?v=2025.11" y-position="bottom" class="lg:flex-row-reverse">
             In addition to offering a global version switcher (which switches the PHP version for all of your projects), this app also includes support for Valet's <b>site isolation</b> feature. This allows you to use a specific version of PHP with a specific domain, all while retaining the globally linked PHP version.
         </x-feature>
-        <x-feature feature-title="Determine compatibility" img-src="/images/phpinfo.jpg?v=2025.07">
+        <x-feature feature-title="Determine compatibility" img-src="/images/phpinfo.jpg?v=2025.11">
             PHP Monitor will help you figure out if your sites are <b>compatible</b> with the <b>currently linked version of PHP</b>. You will receive suggestions when <b>site isolation</b> may be of use for a given domain.
         </x-feature>
-        <x-feature feature-title="Easily manage PHP extensions" img-src="/images/extensions.jpg?v=2025.07" class="lg:flex-row-reverse" y-position="top">
+        <x-feature feature-title="Easily manage PHP extensions" img-src="/images/extensions.jpg?v=2025.11" class="lg:flex-row-reverse" y-position="top">
             With the new PHP Extension Manager, you can easily <b>install and remove</b> PHP extensions, all <b>using a GUI</b>. It is also super easy to manage your extensions on a per PHP version basis via the Domains window (you can right-click on a site and toggle extensions easily).
         </x-feature>
-        <x-feature feature-title="Small, frequent, fast and easy updates" img-src="/images/updater.jpg?v=2025.07" y-position="bottom">
+        <x-feature feature-title="Small, frequent, fast and easy updates" img-src="/images/updater.jpg?v=2025.11" y-position="bottom">
             The app also comes with an optional (but very fast) <b>built-in updater</b>, which allows you to stay up-to-date with the latest developments and bug fixes, so you can have a seamless PHP switching experience.
         </x-feature>
         <div class="flex lg:flex-row flex-col m-auto max-w-5xl py-4 md:py-8 gap-x-10">
