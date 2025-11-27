@@ -1,28 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Early Access (Release Notes) – PHP Monitor</title>
-    <meta name="description" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
-    {{-- Web Fonts --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    {{-- Vite --}}
-    @vite('resources/css/app.css')
-    {{-- OG --}}
-    <meta property="og:title" content="PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.">
-    <meta property="og:image" content="{{ url('/images/phpmon-social.png') }}">
-    {{-- Favicons --}}
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    {{-- Umami --}}
-    <script defer src="https://umami.nicoverbruggen.be/script.js" data-website-id="a94ced9c-2bdd-4a02-9c52-f1b8d34aba89"></script>
-</head>
-<body class="font-sans antialiased">
+@extends('layouts.shared')
+
+@section('title', 'PHP Monitor EAP')
+@section('description', 'This page details all recent changes to EAP builds for PHP Monitor.')
+
+@section('content')
 <div>
     <div class="bg-dim flex">
         <header class="flex flex-col m-auto max-w-xl py-5 md:py-8 lg:py-10 p-4">
@@ -110,5 +91,4 @@
         </div>
     </div>
 </div>
-</body>
-</html>
+@endsection

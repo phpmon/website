@@ -4,21 +4,13 @@ declare(strict_types=1);
 
 use App\Http\Redirection;
 use Illuminate\Support\Facades\Route;
-use League\CommonMark\CommonMarkConverter;
 
 Route::get('/', fn () => view('homepage'));
 
-Route::get('/early-access/release-notes', function () {
-    $path = public_path('builds/early-access/sponsors/changelog.md');
-    if (file_exists($path)) {
-        return view('changelog', [
-            'content' => (new CommonMarkConverter)
-                ->convert(file_get_contents($path)),
-        ]);
-    } else {
-        abort(404);
-    }
-});
+Route::get('/privacy-policy', \App\Http\PrivacyPolicyController::class)
+    ->name('privacy-policy');
+Route::get('/early-access/release-notes', \App\Http\ReleaseNotesController::class)
+    ->name('release-notes');
 
 collect([
     Redirection::named('github', '/github', 'https://github.com/nicoverbruggen/phpmon'),
