@@ -45,6 +45,20 @@ When checking for updates (normally every 24 hours), the app will request the la
 
 - **What version and build of PHP Monitor is currently being used.** This one seems rather obvious, but without knowing what version is currently being used, the app can't determine if a newer version is available. This bit of info is also relevant to point #1 above.
 
+- **A unique session identifier.** This randomized UUID is the same for all API requests and crash reports submitted by the client (PHP Monitor) for a 36-hour period, after which it is randomly regenerated.
+
+### Why and how do you use the unique session identifier?
+
+This was done to identify unique users sharing an IP address. That might sound bad, but let me explain. Here's the breakdown:
+
+- The addition of a UUID adds an extra data point that allows API throttling to be tweaked, if many **unique users are using the same IP address** to access the API.
+
+- This helps identify unique users for a 24-hour period without using an IP address, via **aggregate analytics**. This is achieved by counting unique UUIDs in the last 24 hours.
+
+Knowing how many unique users over a 24-hour period were using the app is an important metric to determine if the server needs to be scaled or to identify how common a particular crash issue is relative to the daily user count. 
+
+**This UUID is simply not used for individual user tracking**, only for legitimate purposes related to API access and server load, as well as aggregate analytics as explained above.
+
 ## Analytics
 
 PHP Monitor does not use any third-party analytics services (no telemetry SDKs). There were various good reasons not to integrate these SDKs, so here's what happens instead:
