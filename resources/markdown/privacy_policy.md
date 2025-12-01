@@ -1,18 +1,10 @@
 ## Introduction
 
-PHP Monitor collects some user data required to keep the app functional (for internal checks), but does NOT transmit that information.
+The developer feels very strongly about not collecting any personal user data (PII). However, broadcasting some data cannot be avoided for certain features, especially those related to online functionality that requires the use of the PHP Monitor API. 
 
-The developer feels very strongly about not collecting any personal user data (PII). However, broadcasting some data cannot be avoided for certain features.
+You can learn more about what data is sent to the server under what circumstances in this document.
 
-You can learn more about that here. The developer of PHP Monitor does provide an API (endpoint) that the app connects to, in order to check for updates, if you choose not to disable this optional feature.
-
-## Analytics
-
-Any information about number of unique users is derived via the legitimate data available via the update check endpoint and crash reports, which informs me how the app needs to be scaled, and which bugs need to be fixed, if necessary.
-
-PHP Monitor DOES NOT broadcast data about individual feature usage or any such. 
-
-Some internal "usage" counts are kept, for example to determine whether after some use the sponsorship message can be displayed. This data is collected, but NOT broadcast, so it remains private to you.
+**Despite this careful approach, if you do not want the app to send any information from your system, you can always disable 1) the automatic update check and 2) choose not to send crash reports, which means no data will ever be sent to the developer or any third party.**
 
 ## Crash reports
 
@@ -41,7 +33,7 @@ The information included in a de-symbolicated crash report is:
 
 No personal information like email address, username, computer name or anything that could personally identify you is collected.
 
-These crash reports can be inspected prior to sending them by pressing the "help" button when the app offers to share the crash report.
+These crash reports can be inspected prior to sending them by pressing the "help" button when the app offers to share the crash report. (You can inspect the crash report before sending, but cannot modify what data is transmitted. The original report is always sent in full.)
 
 ## Checking for updates
 
@@ -49,23 +41,43 @@ These crash reports can be inspected prior to sending them by pressing the "help
 
 When checking for updates (normally every 24 hours), the app will request the latest version of the app by contacting the server. To receive an accurate response, the app broadcasts the following required information:
 
-- **What version of macOS is currently being used.** This is relevant because I want to prevent clients running on versions of macOS that won’t be supported for future releases to not get a notice about updates.
+- **What version of macOS is currently being used.** This is relevant because I want to prevent clients running on versions of macOS that won't be supported for future releases to not get a notice about updates.
 
-- **What version and build of PHP Monitor is currently being used.** This one seems rather obvious, but without knowing what version is currently being used, the app can’t determine if a newer version is available. This bit of info is also relevant to point #1 above.
+- **What version and build of PHP Monitor is currently being used.** This one seems rather obvious, but without knowing what version is currently being used, the app can't determine if a newer version is available. This bit of info is also relevant to point #1 above.
+
+## Analytics
+
+PHP Monitor does not use any third-party analytics services (no telemetry SDKs). There were various good reasons not to integrate these SDKs, so here's what happens instead:
+
+- Any collected metrics are derived exclusively from server logs of update checks and voluntarily submitted crash reports (aggregate counts).
+
+- PHP Monitor does not broadcast data about individual feature usage, but may use some stats to avoid nagging you with repeated alerts. In short, this data remains on your computer and never leaves it.
+
+## Data storage
 
 ### What information is stored?
 
-For historical and analytics purposes, this information is logged to the database and currently retained indefinitely, although I suspect this will be changed in the future. 
+All data related to crash reports and update checks is stored on a secure server that can only be accessed by the developer.
 
-A user's IP address also reaches the API when checking for updates (as a consequence of using the internet), but this information is anonymized when saved to the database. 
+For historical and analytics purposes, this information is logged to the database:
+
+- This historical data is retained for a maximum of 2 years for operational purposes, after which the data is removed and only an aggregate count remains (X amount of unique sessions used the app on day X). 
+
+- In some situations (based on storage needs) this data may be removed even sooner if the database would otherwise grow too large.
+
+- Historical backups may retain data longer for disaster recovery, but are not actively accessed.
+
+A user's IP address also reaches the API when checking for updates (as a consequence of using the internet), but this information is anonymized when saved to the database.
 
 This way, the data can still be used to prevent bad actors from doing too many requests to my server, while not impacting the privacy of users, who remain anonymous and cannot be tracked.
 
-Despite this careful approach, if you do not want the app to send any information from your system, you can always disable the automatic update check.
+### Can I request my data to be deleted?
 
-For a more detailed insight into how the update check works, you can also read [my detailed technical blog post](https://nicoverbruggen.be/blog/phpmon-2025-and-beyond#content-php-monitor-2509-improved-update-checking), which you may find interesting.
+Absolutely! You can reach out to [info@phpmon.app](mailto:info@phpmon.app) to request the deletion of data linked to a given UUID, which will most likely be a crash report. 
 
-## Open source, yay!
+For example: you must reference the UUID of the crash report, or I won't know which crash report is actually yours.
+
+## Benefits of open source
 
 ### Can I examine the source code myself?
 
@@ -79,5 +91,5 @@ The source code of the API is not (currently) publicly available, but [this webs
 
 PHP Monitor makes use of the Homebrew installation and Laravel Valet installed on the user's system. The user is responsible for investigating how any third-party software uses analytics. 
 
-- You can learn more about how [Homebrew]((https://docs.brew.sh/Analytics)) collects analytics. I've also included a little bit of information about this in the README.
+- You can learn more about how [Homebrew](https://docs.brew.sh/Analytics) collects analytics. I've also included a little bit of information about this in the README.
 - For certain other update checks (i.e. checking if there are any updates to Laravel Valet), the app may connect to other services, like [Packagist](https://packagist.org/).
