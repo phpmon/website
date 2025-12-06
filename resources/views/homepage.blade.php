@@ -73,7 +73,7 @@
     <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
         <h2 class="text-3xl mb-3">
         <span class="inline-block bg-primary px-2 py-1 text-white text-2xl rounded font-bold">
-            PHP Monitor 25.11 is now available!
+            PHP Monitor 25.12 is now available!
         </span>
         </h2>
         <div class="text-xl mt-8 leading-8">
