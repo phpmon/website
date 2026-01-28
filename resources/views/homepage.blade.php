@@ -114,29 +114,30 @@
         The app also comes with an optional (but very fast) <b>built-in updater</b>, which allows you to stay up-to-date with the latest developments and bug fixes, so you can have a seamless PHP switching experience.
     </x-feature>
     <div class="flex lg:flex-row flex-col m-auto max-w-5xl py-4 md:py-8 gap-x-10">
-        <x-single-feature feature-title="A tiny footprint">
+        <x-single-feature feature-title="🦶 A tiny footprint">
             Laravel Valet is a lightweight solution that is much leaner than Docker. PHP Monitor as a companion tool uses few system resources: it is light on RAM, and CPU usage is negligible.
         </x-single-feature>
-        <x-single-feature feature-title="Privacy conscious">
-            No tracking. No bullshit. Nothing to worry about. What does that mean? Well, learn more about how your data is respected by reading the
+        <x-single-feature feature-title="🇪🇺 Made in Europe">
+            Built in Europe. No tracking. No bullshit. Nothing to worry about. Learn more about how your data is respected by reading the
             <a class="underline" href="{{ route('privacy-policy') }}">privacy policy</a>. In plain English!
         </x-single-feature>
-        <x-single-feature feature-title="No nagging for donations">
-            PHP Monitor will only ask you to donate <em>once</em>, after installing it on a new computer. If you can afford it, donations are very welcome!
+        <x-single-feature feature-title="💶 No nagging for donations">
+            PHP Monitor will only ask you to donate once after installing it on a new computer. However, if you can, please <a class="underline" href="https://nicoverbruggen.be/sponsor">support the project</a>.
         </x-single-feature>
     </div>
 </div>
 <footer class="bg-blue-50 flex p-5 mt-6">
     <div class="flex flex-col m-auto max-w-xl space-y-2">
-        <p class="text-sm">I hope you enjoy using the app. I hope you find it makes your day-to-day life a little more productive, enjoyable and most importantly... less stressful. Have a great day!</p>
-        <p class="text-xs pt-2">
-            &copy; {{ date("Y") }}, Nico Verbruggen. All rights reserved.
-        </p>
+        <p class="text-sm font-bold">I hope you enjoy using the app. I hope you find it makes your day-to-day life a little more productive, enjoyable and most importantly... less stressful. Have a great day!</p>
+
         <p class="text-xs pt-2">
             <a class="underline" href="{{ route('privacy-policy') }}">Privacy Policy</a>
             | <a class="underline" href="{{ route('release-notes') }}">Release Notes</a>
             | <a class="underline" rel="me" href="https://nicoverbruggen.be">Website</a>
             | <a class="underline" rel="me" href="https://phpc.social/@nicoverbruggen">Mastodon</a>
+        </p>
+        <p class="text-xs pt-2">
+            &copy; {{ date("Y") }}, Nico Verbruggen. All rights reserved.
         </p>
     </div>
 </footer>
