@@ -45,7 +45,7 @@
                 margin-bottom: 3px;
             }
         </style>
-        <p class="text-center">This document was last updated on: {{ $lastUpdated }}.</p>
+        <p class="text-center">You can check out the full edit history of this document <a href="https://github.com/phpmon/website/commits/main/resources/markdown/privacy_policy.md">on GitHub</a>.</p>
         {!! $content !!}
     </div>
 </div>
