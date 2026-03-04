@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url('/favicon/apple-touch-icon.png') }}">
     <link rel="manifest" href="{{ url('/favicon/site.webmanifest') }}">
     {{-- Umami --}}
-    <script defer src="https://umami.nicoverbruggen.be/script.js" data-website-id="a94ced9c-2bdd-4a02-9c52-f1b8d34aba89"></script>
+    <script defer src="https://dna.nicoverbruggen.be/script.js" data-website-id="a94ced9c-2bdd-4a02-9c52-f1b8d34aba89"></script>
 </head>
 <body class="font-sans antialiased">
     @yield('content')
