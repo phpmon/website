@@ -18,6 +18,15 @@ There are also feature tests covering the homepage, the privacy policy page, the
 
 See `composer.json`.
 
+## Development setup
+
+```bash
+cp .env.example .env
+php artisan key:generate
+npm i
+npm run build
+```
+
 ## Tests
 
     composer verify

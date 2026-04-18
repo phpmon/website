@@ -8,15 +8,21 @@ use Tests\TestCase;
 
 class RedirectReachabilityTest extends TestCase
 {
-    public function test_redirects_work()
+    public function test_redirects_work(): void
     {
-        $response = $this->get('/github');
-        $response->assertStatus(302);
-        $response->assertRedirect('https://github.com/nicoverbruggen/phpmon');
-
-        $this->get('/faq')->assertStatus(302);
-        $this->get('/releases')->assertStatus(302);
-        $this->get('/sponsor')->assertStatus(302);
-        $this->get('/sponsor/now')->assertStatus(302);
+        foreach ([
+            '/github' => 'https://github.com/nicoverbruggen/phpmon',
+            '/releases' => 'https://github.com/nicoverbruggen/phpmon/releases',
+            '/faq' => 'https://github.com/nicoverbruggen/phpmon?tab=readme-ov-file#%E2%80%8D%EF%B8%8F-faq--troubleshooting',
+            '/sponsor' => 'https://nicoverbruggen.be/sponsor',
+            '/sponsor/now' => 'https://nicoverbruggen.be/sponsor#pay-now',
+            '/prerelease-php' => 'https://github.com/nicoverbruggen/phpmon/wiki/Supporting-pre-release-versions-of-PHP',
+            '/php-unavailable' => 'https://github.com/nicoverbruggen/phpmon/wiki/Installing-or-upgrading-to-the-latest-version-of-PHP#why-is-a-php-version-marked-as-unavailable',
+            '/php-upgrade' => 'https://github.com/nicoverbruggen/phpmon/wiki/Installing-or-upgrading-to-the-latest-version-of-PHP',
+        ] as $path => $target) {
+            $this->get($path)
+                ->assertStatus(302)
+                ->assertRedirect($target);
+        }
     }
 }
