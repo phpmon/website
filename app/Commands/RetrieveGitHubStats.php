@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Log;
 
 final class RetrieveGitHubStats extends Command
 {
-    protected $signature = 'github:fetch';
+    protected $signature = 'github:fetch-statistics';
 
     protected $description = 'Fetches GitHub repository data (and stars + downloads)';
 

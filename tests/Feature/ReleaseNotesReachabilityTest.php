@@ -11,36 +11,35 @@ class ReleaseNotesReachabilityTest extends TestCase
 {
     private string $releaseNotesPath;
 
-    private bool $releaseNotesExisted = false;
-
-    private ?string $originalReleaseNotesContent = null;
+    private ?string $originalContent = null;
 
     protected function setUp(): void
     {
         parent::setUp();
 
         $this->releaseNotesPath = public_path('builds/early-access/sponsors/changelog.md');
-        $this->releaseNotesExisted = File::exists($this->releaseNotesPath);
-        $this->originalReleaseNotesContent = $this->releaseNotesExisted
-            ? File::get($this->releaseNotesPath)
-            : null;
+
+        if (File::exists($this->releaseNotesPath)) {
+            $this->originalContent = File::get($this->releaseNotesPath);
+        }
     }
 
     protected function tearDown(): void
     {
-        if ($this->releaseNotesExisted) {
-            File::put($this->releaseNotesPath, $this->originalReleaseNotesContent ?? '');
+        if ($this->originalContent !== null) {
+            File::put($this->releaseNotesPath, $this->originalContent);
         } else {
             File::delete($this->releaseNotesPath);
 
-            foreach ([
-                dirname($this->releaseNotesPath),
-                dirname(dirname($this->releaseNotesPath)),
-                dirname(dirname(dirname($this->releaseNotesPath))),
-            ] as $directory) {
-                if (File::isDirectory($directory) && File::isEmptyDirectory($directory)) {
-                    File::deleteDirectory($directory);
-                }
+            $directory = dirname($this->releaseNotesPath);
+            $publicPath = public_path();
+
+            while ($directory !== $publicPath
+                && File::isDirectory($directory)
+                && File::isEmptyDirectory($directory)
+            ) {
+                File::deleteDirectory($directory);
+                $directory = dirname($directory);
             }
         }
 

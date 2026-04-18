@@ -1,3 +1,8 @@
+@php
+    $latestReleaseVersion = Cache::get('latest_release_version');
+    $latestReleasePublishedAt = Cache::get('latest_release_published_at');
+@endphp
+
 @extends('layouts.shared')
 
 @section('title', 'PHP Monitor')
@@ -42,7 +47,7 @@
             <p class="text-2xl leading-9 mb-6"><b>PHP Monitor</b> helps you set up and develop <span class="text-primary">Laravel</span> and <span class="text-primary">Symfony</span> projects. It's also great for <span class="text-primary">WordPress</span> or <span class="text-primary">Drupal</span> sites. In fact, it's a great companion for all kinds of projects, no matter the framework or CMS.</p>
         </div>
         @if (Cache::has('stargazers') && Cache::has('downloads'))
-            <div class="max-w-2xl m-auto mt-6 pb-6 space-y-3 border border-b-gray-200 rounded-lg px-8 py-4 shadow-lg">
+            <div class="max-w-2xl m-auto mt-6 pb-6 space-y-3 border border-gray-100 rounded-lg px-8 py-4 shadow-lg">
                 <p class="uppercase font-bold text-center mt-1 mb-5 flex items-center space-x-2">
                     <svg width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33c.85 0 1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
                     <span>GitHub Stats</span>
@@ -69,19 +74,29 @@
         </div>
     </div>
 </div>
-<div class="bg-dim flex p-5 py-10 my-6">
-    <div class="flex flex-col m-auto max-w-xl space-y-2 py-8">
-        <h2 class="text-3xl mb-3">
-        <span class="inline-block bg-primary px-2 py-1 text-white text-2xl rounded font-bold">
-            PHP Monitor 26.02 is now available!
-        </span>
-        </h2>
-        <div class="text-xl mt-8 leading-8">
-            <p class="mb-4">I am releasing monthly updates with minor improvements and quality of life changes for the foreseeable future to better support the app.</p>
-            <p class="text-base mb-4">You can check out the <a href="https://github.com/nicoverbruggen/phpmon/releases" class="text-primary">latest release notes</a> on GitHub for more details.</p>
+@if ($latestReleaseVersion)
+    <div class="bg-dim flex p-5 py-10 my-6">
+        <div class="flex flex-col m-auto max-w-xl py-8">
+            <h2 class="text-3xl mb-4">
+                <span class="inline-block bg-primary px-2 py-1 text-white text-2xl rounded font-bold">
+                    PHP Monitor {{ $latestReleaseVersion }} is now available!
+                </span>
+            </h2>
+            <div class="text-xl leading-8">
+                <p class="mb-6">I am releasing monthly updates with minor improvements and quality of life changes for the foreseeable future to better support the app.</p>
+                <p class="mb-4">
+                    <a href="https://github.com/nicoverbruggen/phpmon/releases" class="inline-flex items-center rounded-lg bg-white px-4 py-2 text-base font-semibold text-black shadow-md transition hover:bg-blue-200">
+                        Read the release notes
+                        <span class="ml-2 text-lg leading-none">›</span>
+                    </a>
+                </p>
+                @if ($latestReleasePublishedAt)
+                    <p class="text-sm text-gray-500">PHP Monitor was last updated on {{ \Illuminate\Support\Carbon::parse($latestReleasePublishedAt)->format('d/m/Y') }}.</p>
+                @endif
+            </div>
         </div>
     </div>
-</div>
+@endif
 <div class="px-4">
     <x-feature feature-title="Totally free & open source" y-position="top" x-position="left" class="lg:flex-row-reverse" img-src="/images/oss.png?v=7">
         PHP Monitor's source code is, unlike other proprietary products, entirely <b>open source</b>. Also, all features that are part of PHP Monitor are available <b>entirely free of charge</b>, so you don't need to pay for any walled-off features. How great is that?

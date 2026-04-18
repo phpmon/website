@@ -26,18 +26,31 @@ class HomepageReachabilityTest extends TestCase
         $response->assertSee('/privacy-policy');
         $response->assertSee('/github');
         $response->assertSee('/sponsor');
+        $response->assertDontSee('is now available!');
     }
 
     public function test_homepage_displays_cached_github_stats_when_available(): void
     {
-        Cache::put('stargazers', 12800);
-        Cache::put('downloads', 255000);
+        Cache::put('stargazers', 3000);
+        Cache::put('downloads', 100000);
 
         $response = $this->get('/');
 
         $response->assertOk();
         $response->assertSee('GitHub Stats');
-        $response->assertSee('12.8k');
-        $response->assertSee('255k');
+        $response->assertSee('3k');
+        $response->assertSee('100k');
+    }
+
+    public function test_homepage_displays_cached_latest_release_information_when_available(): void
+    {
+        Cache::put('latest_release_version', '26.03');
+        Cache::put('latest_release_published_at', '2026-04-17T08:30:00Z');
+
+        $response = $this->get('/');
+
+        $response->assertOk();
+        $response->assertSee('PHP Monitor 26.03 is now available!');
+        $response->assertSee('PHP Monitor was last updated on 17/04/2026.');
     }
 }

@@ -6,8 +6,8 @@
     "require": {
         "php": "^8.5",
         "guzzlehttp/guzzle": "^7.10.0",
-        "laravel/framework": "^12.56",
-        "laravel/tinker": "^2.11.1",
+        "laravel/framework": "^13.0",
+        "laravel/tinker": "^3.0",
         "league/commonmark": "^2.8.2"
     },
     "require-dev": {
@@ -17,7 +17,7 @@
         "laravel/pail": "^1.2.6",
         "mockery/mockery": "^1.6.12",
         "nunomaduro/collision": "^8.9.3",
-        "phpunit/phpunit": "^11.5.55",
+        "phpunit/phpunit": "^12.0",
         "rector/rector": "^2.4.2"
     },
     "autoload": {
@@ -33,7 +33,9 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan github:fetch-statistics --ansi",
+            "@php artisan github:fetch-latest-release --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
