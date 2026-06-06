@@ -27,7 +27,7 @@ final class RetrieveLatestGitHubRelease extends Command
 
         $release = json_decode($response->body(), null, 512, JSON_THROW_ON_ERROR);
 
-        Cache::put('latest_release_version', ltrim($release->tag_name, 'v'));
+        Cache::put('latest_release_version', ltrim((string) $release->tag_name, 'v'));
         Cache::put('latest_release_published_at', $release->published_at);
 
         $this->info("Latest stable PHP Monitor release is {$release->tag_name}, published on {$release->published_at}.");
