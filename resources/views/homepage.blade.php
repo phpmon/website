@@ -14,5 +14,6 @@
 @include('homepage.overview')
 @include('homepage.latest-release')
 @include('homepage.features')
+@include('homepage.faq')
 @include('homepage.footer')
 @endsection
