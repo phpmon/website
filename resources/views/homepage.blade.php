@@ -5,8 +5,8 @@
 
 @extends('layouts.shared')
 
-@section('title', 'PHP Monitor')
-@section('description', 'PHP Monitor: Lightweight, native Mac menu bar app that interacts with Laravel Valet. Helps you manage multiple PHP installations, locate config files and more.')
+@section('title', 'PHP Monitor: Set up and manage PHP on macOS')
+@section('description', 'Free native Mac app for installing PHP, managing Laravel Valet sites, switching PHP versions, configuring extensions, and monitoring your local PHP environment.')
 
 @section('content')
 <div class="bg-primary p-4 text-center text-white">
@@ -14,13 +14,16 @@
     <a class="underline font-bold" href="/early-access/release-notes" target="_blank">Learn more</a>
 </div>
 <div class="bg-dim flex">
-    <header class="flex flex-col m-auto max-w-xl py-5 md:py-8 lg:py-10 p-4">
+    <header class="flex flex-col m-auto max-w-2xl py-5 md:py-8 lg:py-10 p-4">
         <div>
             <x-logo size="100"></x-logo>
-            <h1 class="text-5xl font-bold mb-3 text-black">
-                Monitor and manage<br/>your PHP installations<br/> <span class="text-primary">with ease</span>.
+            <p class="text-2xl font-bold mb-5 uppercase tracking-wide">
+                PHP Monitor
+            </p>
+            <h1 class="text-5xl font-bold leading-13 mb-3 text-black">
+                Set up PHP on your Mac and keep it <span class="text-primary">trucking along</span>.
             </h1>
-            <p class="text-2xl leading-9 mt-8 text-black"><b>PHP Monitor</b> is a lightweight, native Mac menu bar app that works best when accompanied by <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a> (but it also works without it).</p>
+            <p class="text-xl md:text-2xl leading-8 md:leading-9 mt-8 text-black">Easily install and configure your development environment with PHP. Serve sites with <a href="https://github.com/laravel/valet" class="underline">Laravel Valet</a>, switch PHP versions, manage extensions, and spot issues before they slow you down.</p>
             <div class="flex md:space-x-3 mt-6 flex-col md:flex-row">
                 <a href="{{ url()->route('releases') }}" class="mt-4 text-lg md:text-xl px-4 py-2 bg-green-400 hover:bg-green-500 text-black hover:text-gray-900 rounded-lg shadow-md flex">
                     <svg width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M13 13v5.585l1.828-1.828l1.415 1.415L12 22.414l-4.243-4.242l1.415-1.415L11 18.585V13h2zM12 2a7.001 7.001 0 0 1 6.954 6.194a5.5 5.5 0 0 1-.953 10.784v-2.014a3.5 3.5 0 1 0-1.112-6.91a5 5 0 1 0-9.777 0a3.5 3.5 0 0 0-1.292 6.88l.18.03v2.014a5.5 5.5 0 0 1-.954-10.784A7 7 0 0 1 12 2z"/></svg>
@@ -98,6 +101,9 @@
     </div>
 @endif
 <div class="px-4">
+    <x-feature feature-title="Guided PHP environment setup" y-position="top" img-src="/images/version-manager.jpg?v=2025.11">
+        PHP Monitor helps you get from a blank Mac to a working local PHP setup. It can guide you through installing PHP, configuring <b>Laravel Valet</b>, checking services, and fixing common setup issues without making you piece together terminal commands by hand.
+    </x-feature>
     <x-feature feature-title="Totally free & open source" y-position="top" x-position="left" class="lg:flex-row-reverse" img-src="/images/oss.png?v=7">
         PHP Monitor's source code is, unlike other proprietary products, entirely <b>open source</b>. Also, all features that are part of PHP Monitor are available <b>entirely free of charge</b>, so you don't need to pay for any walled-off features. How great is that?
     </x-feature>
