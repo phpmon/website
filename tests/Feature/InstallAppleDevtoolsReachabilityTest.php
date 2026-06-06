@@ -23,7 +23,7 @@ class InstallAppleDevtoolsReachabilityTest extends TestCase
         $response->assertSee('Why PHP Monitor needs Apple Command Line Tools');
         $response->assertSee('xcode-select --install', false);
         $response->assertSee('Why this is required');
-        $response->assertSee('After the tools are installed');
+        $response->assertSee("What's next?", false);
         $response->assertSee('/install-homebrew');
     }
 }

@@ -4,13 +4,18 @@
 ])
 
 <details {{ $attributes->class([
-    'group',
-    'border-b border-blue-100' => ! $last,
+    'group rounded-md border border-blue-100 bg-white shadow-sm transition hover:border-blue-200 hover:shadow-md open:border-primary/40 open:shadow-md',
 ]) }}>
-    <summary class="flex cursor-pointer list-none items-center justify-between gap-4 bg-white px-5 py-4 text-lg font-bold text-black transition hover:bg-blue-50/70 hover:text-primary group-open:bg-blue-50/60 group-open:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary">
+    <summary class="flex cursor-pointer list-none items-start justify-between gap-4 rounded-md px-5 py-4 text-left text-lg font-bold leading-7 text-black transition hover:text-primary group-open:rounded-b-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary">
         <span>{{ $question }}</span>
-        <span class="shrink-0 text-2xl leading-none text-primary transition group-open:rotate-45">+</span>
+        <span class="mt-1.5 shrink-0 text-primary transition group-open:rotate-90" aria-hidden="true">
+            <svg class="h-4 w-4" viewBox="0 0 16 16">
+                <path d="M6 3.5v9l5-4.5z" fill="currentColor"/>
+            </svg>
+        </span>
     </summary>
 
-    {{ $slot }}
+    <div class="border-t border-blue-100 bg-white pt-4">
+        {{ $slot }}
+    </div>
 </details>

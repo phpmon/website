@@ -23,7 +23,7 @@ class InstallHomebrewReachabilityTest extends TestCase
         $response->assertSee('Why PHP Monitor needs Homebrew');
         $response->assertSee('/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"', false);
         $response->assertSee('Why this is required');
-        $response->assertSee('After Homebrew is installed');
+        $response->assertSee("What's next?", false);
         $response->assertSee('/install-apple-devtools');
         $response->assertSee('https://brew.sh');
     }

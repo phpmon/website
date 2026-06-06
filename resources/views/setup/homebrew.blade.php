@@ -13,7 +13,7 @@
             <x-logo size="90"></x-logo>
             <div>
                 <p class="text-lg font-bold uppercase tracking-wide text-black">PHP Monitor Setup</p>
-                <h1 class="mt--2 text-4xl font-bold leading-tight text-black">
+                <h1 class="text-4xl font-bold leading-tight text-black">
                     Homebrew
                 </h1>
                 <p class="mt-5 text-xl leading-8 text-gray-800">

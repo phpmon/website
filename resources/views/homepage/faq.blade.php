@@ -1,7 +1,7 @@
 <section class="bg-blue-50 px-4 py-10 md:py-14">
     <div class="m-auto max-w-3xl">
         <h2 class="text-center text-3xl font-bold text-black">Q&A</h2>
-        <div class="mt-8 overflow-hidden rounded-md border border-blue-100 bg-white shadow-sm">
+        <div class="mt-8 space-y-3">
             <x-faq-item question="Can PHP Monitor set up PHP on a fresh Mac?">
                 <p class="px-5 pb-5 leading-7 text-gray-700">
                     Yes. Setup Assistant can guide you through preparing a local PHP development environment on macOS, including the various packages and dependencies that PHP Monitor expects to find and uses to give you a great development environment.
