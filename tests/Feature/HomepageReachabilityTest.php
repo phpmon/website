@@ -27,7 +27,7 @@ class HomepageReachabilityTest extends TestCase
         $response->assertSee('/github');
         $response->assertSee('/sponsor');
         $response->assertSee('Q&A', false);
-        $response->assertSee('Visit FAQ on GitHub');
+        $response->assertSee('FAQ on GitHub');
         $response->assertSee('/faq');
         $response->assertDontSee('is now available!');
     }

@@ -49,7 +49,7 @@
                     Well, you should use the developer tooling you find most useful and works best for your workflow!
                 </p>
                 <p class="px-5 pb-3 leading-7 text-gray-700">
-                    I built PHP Monitor because it neatly integrates with <a href="https://brew.sh" class="text-primary underline">Homebrew</a>, which you may already be using for other dependencies, too. It's a great package manager.
+                    I built PHP Monitor because it neatly integrates with <a href="{{ route('setup.homebrew') }}" class="text-primary underline">Homebrew</a>, which you may already be using for other dependencies, too. It's a great package manager.
                 </p>
                 <p class="px-5 pb-5 leading-7 text-gray-700">
                     <a href="https://herd.laravel.com" class="text-primary underline">Laravel Herd</a> and other solutions don't integrate with Homebrew, which can be an advantage or disadvantage depending on your use case. You can decide what works best for you. I'm just offering you a free, open-source option here.

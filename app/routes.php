@@ -9,6 +9,10 @@ Route::get('/', fn () => view('homepage'));
 
 Route::get('/privacy-policy', \App\Http\PrivacyPolicyController::class)
     ->name('privacy-policy');
+Route::get('/install-apple-devtools', fn () => view('setup.apple-devtools'))
+    ->name('setup.apple-devtools');
+Route::get('/install-homebrew', fn () => view('setup.homebrew'))
+    ->name('setup.homebrew');
 Route::get('/early-access/release-notes', \App\Http\ReleaseNotesController::class)
     ->name('release-notes');
 
