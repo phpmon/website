@@ -35,6 +35,9 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
         ],
+        "post-install-cmd": [
+            "@fetch-github-data"
+        ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ],
@@ -49,6 +52,10 @@
         "rector": "./vendor/bin/rector process",
         "test": "php artisan test",
         "coverage": "php artisan test --coverage",
+        "fetch-github-data": [
+            "@php artisan github:fetch-statistics --ansi",
+            "@php artisan github:fetch-latest-release --ansi"
+        ],
         "verify": [
             "@rector",
             "@pint",
