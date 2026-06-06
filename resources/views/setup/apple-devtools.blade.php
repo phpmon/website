@@ -2,6 +2,45 @@
 
 @section('title', 'Why PHP Monitor needs Apple Command Line Tools')
 @section('description', 'Learn why PHP Monitor requires Apple Command Line Tools on macOS and how to install them before continuing setup.')
+@section('og_type', 'article')
+
+@push('head')
+    @php
+        $howToSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'HowTo',
+            'name' => 'Install Apple Command Line Tools for PHP Monitor',
+            'description' => $__env->yieldContent('description'),
+            'image' => url('/images/phpmon-social.png'),
+            'url' => route('setup.apple-devtools'),
+            'tool' => [
+                [
+                    '@type' => 'HowToTool',
+                    'name' => 'Terminal',
+                ],
+            ],
+            'step' => [
+                [
+                    '@type' => 'HowToStep',
+                    'name' => 'Open Terminal',
+                    'text' => 'Open Terminal on macOS.',
+                ],
+                [
+                    '@type' => 'HowToStep',
+                    'name' => 'Run the Apple Command Line Tools installer',
+                    'text' => 'Paste xcode-select --install and follow the macOS installer prompt.',
+                    'url' => route('setup.apple-devtools') . '#install-apple-devtools-command',
+                ],
+                [
+                    '@type' => 'HowToStep',
+                    'name' => 'Continue PHP Monitor setup',
+                    'text' => 'Return to PHP Monitor and continue through Setup Assistant.',
+                ],
+            ],
+        ];
+    @endphp
+    <script type="application/ld+json">{!! json_encode($howToSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
 
 @section('content')
 <div class="bg-dim px-4 py-8 md:py-12">
@@ -31,7 +70,7 @@
             <p class="mt-4 leading-7 text-gray-700">
                 Open Terminal, paste this command, and follow the macOS installer prompt:
             </p>
-            <pre class="mt-5 overflow-x-auto rounded-md border border-blue-100 bg-gray-950 p-5 text-sm leading-6 text-white shadow-sm"><code>xcode-select --install</code></pre>
+            <pre id="install-apple-devtools-command" class="mt-5 overflow-x-auto rounded-md border border-blue-100 bg-gray-950 p-5 text-sm leading-6 text-white shadow-sm"><code>xcode-select --install</code></pre>
             <p class="mt-4 leading-7 text-gray-700">
                 A window will pop up, as macOS asks you to install these tools. The installer may take a few minutes. If macOS says the tools are already installed, you can return to PHP Monitor and continue setup.
             </p>

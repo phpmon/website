@@ -15,6 +15,18 @@ Route::get('/install-homebrew', fn () => view('setup.homebrew'))
     ->name('setup.homebrew');
 Route::get('/early-access/release-notes', \App\Http\ReleaseNotesController::class)
     ->name('release-notes');
+Route::get('/sitemap.xml', fn () => response()
+    ->view('sitemap', [
+        'urls' => [
+            ['loc' => url('/'), 'changefreq' => 'weekly', 'priority' => '1.0'],
+            ['loc' => route('setup.apple-devtools'), 'changefreq' => 'monthly', 'priority' => '0.6'],
+            ['loc' => route('setup.homebrew'), 'changefreq' => 'monthly', 'priority' => '0.6'],
+            ['loc' => route('release-notes'), 'changefreq' => 'weekly', 'priority' => '0.5'],
+            ['loc' => route('privacy-policy'), 'changefreq' => 'yearly', 'priority' => '0.3'],
+        ],
+    ], 200)
+    ->header('Content-Type', 'application/xml'))
+    ->name('sitemap');
 
 collect([
     Redirection::named('github', '/github', 'https://github.com/nicoverbruggen/phpmon'),

@@ -2,6 +2,45 @@
 
 @section('title', 'Why PHP Monitor needs Homebrew')
 @section('description', 'Learn why PHP Monitor requires Homebrew on macOS and how to install Homebrew before continuing setup.')
+@section('og_type', 'article')
+
+@push('head')
+    @php
+        $howToSchema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'HowTo',
+            'name' => 'Install Homebrew for PHP Monitor',
+            'description' => $__env->yieldContent('description'),
+            'image' => url('/images/phpmon-social.png'),
+            'url' => route('setup.homebrew'),
+            'tool' => [
+                [
+                    '@type' => 'HowToTool',
+                    'name' => 'Terminal',
+                ],
+            ],
+            'step' => [
+                [
+                    '@type' => 'HowToStep',
+                    'name' => 'Open Terminal',
+                    'text' => 'Open Terminal on macOS.',
+                ],
+                [
+                    '@type' => 'HowToStep',
+                    'name' => 'Run the Homebrew installer',
+                    'text' => 'Paste the Homebrew install command and follow the instructions printed by the installer.',
+                    'url' => route('setup.homebrew') . '#install-homebrew-command',
+                ],
+                [
+                    '@type' => 'HowToStep',
+                    'name' => 'Continue PHP Monitor setup',
+                    'text' => 'Return to PHP Monitor and continue through Setup Assistant.',
+                ],
+            ],
+        ];
+    @endphp
+    <script type="application/ld+json">{!! json_encode($howToSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+@endpush
 
 @section('content')
 <div class="bg-dim px-4 py-8 md:py-12">
@@ -31,7 +70,7 @@
             <p class="mt-4 leading-7 text-gray-700">
                 Open Terminal, paste this command, and follow the instructions printed by the Homebrew installer:
             </p>
-            <pre class="mt-5 overflow-x-auto rounded-md border border-blue-100 bg-gray-950 p-5 text-sm leading-6 text-white shadow-sm"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+            <pre id="install-homebrew-command" class="mt-5 overflow-x-auto rounded-md border border-blue-100 bg-gray-950 p-5 text-sm leading-6 text-white shadow-sm"><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
             <p class="mt-4 leading-7 text-gray-700">
                 The installer may ask for your macOS password and may install <a href="{{ route('setup.apple-devtools') }}" class="text-primary underline">Apple Command Line Tools</a> if they are missing. When it finishes, follow any "Next steps" it prints, especially if it asks you to add Homebrew to your shell environment.
             </p>
