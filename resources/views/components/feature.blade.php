@@ -3,11 +3,14 @@
         <div class="flex flex-col">
             @isset ($featureTitle)
                 <h3 class="text-primary font-bold text-xl mb-5
-                border-b-dim border-b-2 pb-1 inline-block">
+                border-b-dim border-b-2 pb-1 inline-flex max-w-full items-center gap-1.5 leading-snug">
+                    @isset($featureNumber)
+                        <span class="flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-full bg-primary text-[0.65rem] font-bold leading-none text-white">{{ $featureNumber }}</span>
+                    @endisset
                     @isset($badge)
                         <span class="bg-blue-800 text-white px-2 py-1 rounded-xl mr-1 text-sm relative bottom-0.5">{{ \Illuminate\Support\Str::upper($badge) }}</span>
                     @endisset
-                    {{ $featureTitle }}
+                    <span>{{ $featureTitle }}</span>
                 </h3>
             @endisset
             <p class="text-lg text-gray-800">{{ $slot }}</p>
