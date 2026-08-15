@@ -1,6 +1,5 @@
 @props([
     'question',
-    'last' => false,
 ])
 
 <details {{ $attributes->class([
@@ -15,7 +14,7 @@
         </span>
     </summary>
 
-    <div class="border-t border-blue-100 bg-white pt-4">
+    <div class="border-t border-blue-100 bg-white px-5 pt-4 pb-5 space-y-3 leading-7 text-gray-700">
         {{ $slot }}
     </div>
 </details>

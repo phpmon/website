@@ -1,7 +1,7 @@
 @extends('layouts.shared')
 
-@section('title', 'PHP Monitor EAP')
-@section('description', 'This page details all recent changes to EAP builds for PHP Monitor.')
+@section('title', 'Early Access Release Notes — PHP Monitor')
+@section('description', 'All recent changes to the early access builds of PHP Monitor, available to GitHub sponsors.')
 
 @section('content')
 <div>

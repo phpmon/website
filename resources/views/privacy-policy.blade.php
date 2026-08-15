@@ -1,7 +1,7 @@
 @extends('layouts.shared')
 
-@section('title', 'Privacy Policy')
-@section('description', 'Document detailing privacy policy for PHP Monitor.')
+@section('title', 'Privacy Policy — PHP Monitor')
+@section('description', 'How PHP Monitor handles your data: what is collected, what is not, and why. Written in plain English.')
 
 @section('content')
 <div>

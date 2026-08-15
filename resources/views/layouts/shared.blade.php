@@ -6,11 +6,7 @@
     <title>@yield('title')</title>
     <meta name="description" content="@yield('description')">
     <link rel="canonical" href="@yield('canonical', url()->current())">
-    {{-- Web Fonts --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    {{-- Vite --}}
+    {{-- Vite (Inter is self-hosted via @fontsource-variable/inter, bundled into app.css) --}}
     @vite('resources/css/app.css')
     {{-- OG --}}
     <meta property="og:type" content="@yield('og_type', 'website')">
@@ -18,12 +14,16 @@
     <meta property="og:title" content="@yield('title')">
     <meta property="og:description" content="@yield('description')">
     <meta property="og:image" content="@yield('image', url('/images/phpmon-social.png'))">
+    <meta property="og:image:width" content="@yield('image_width', '1280')">
+    <meta property="og:image:height" content="@yield('image_height', '640')">
+    <meta property="og:image:alt" content="@yield('image_alt', 'The PHP Monitor app running on macOS.')">
     <meta property="og:site_name" content="PHP Monitor">
     {{-- Twitter --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('title')">
     <meta name="twitter:description" content="@yield('description')">
     <meta name="twitter:image" content="@yield('image', url('/images/phpmon-social.png'))">
+    <meta name="twitter:image:alt" content="@yield('image_alt', 'The PHP Monitor app running on macOS.')">
     {{-- Favicons --}}
     <link rel="icon" type="image/svg+xml" href="{{ url('/favicon/favicon.svg') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ url('/favicon/favicon-96x96.png') }}">
