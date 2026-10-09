@@ -21,7 +21,8 @@ class HomepageReachabilityTest extends TestCase
         $response = $this->get('/');
 
         $response->assertOk();
-        $response->assertSee('Support PHP Monitor with a monthly sponsorship');
+        $response->assertSee('If you like my software, support it with a monthly sponsorship on');
+        $response->assertSee('https://github.com/sponsors/nicoverbruggen');
         $response->assertSee('/early-access/release-notes');
         $response->assertSee('/privacy-policy');
         $response->assertSee('/github');

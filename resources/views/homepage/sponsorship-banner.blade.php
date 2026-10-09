@@ -1,4 +1,4 @@
 <div class="bg-primary p-4 text-center text-white">
-    Support PHP Monitor with a monthly sponsorship of $5 or more on GitHub for early access builds!
-    <a class="underline font-bold" href="/early-access/release-notes" target="_blank">Learn more</a>
+    If you like my software, support it with a monthly sponsorship on
+    <a class="underline font-bold" href="https://github.com/sponsors/nicoverbruggen" target="_blank">GitHub Sponsors</a>.
 </div>

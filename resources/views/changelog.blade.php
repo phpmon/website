@@ -83,7 +83,6 @@
         <div class="flex flex-col m-auto max-w-3xl py-4 md:py-10">
             <div class="p-4 mb-8 bg-yellow-100 py-4 infobox shadow-sm">
                 <p>This is the changelog for the early access builds of PHP Monitor. You can gain access to these builds by <a href="https://github.com/sponsors/nicoverbruggen" target="_blank">sponsoring the project</a> on a monthly basis on GitHub for as low as $5 per month.</p>
-                <p class="text-sm mt-2 text-gray-500">You also get early access to a private repository, and I will prioritize issues opened by you if you are sponsor.</p>
             </div>
 
             <h1>Release Notes</h1>
